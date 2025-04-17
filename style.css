@@ -58,6 +58,7 @@ nav a:hover {
   background-image: url('hero.jpg');
   background-size: cover;
   background-position: center;
+  background-color: #003366; /* Fallback */
 }
 
 .hero::after {
@@ -89,24 +90,6 @@ nav a:hover {
   font-size: 1.2rem;
 }
 
-/* --- Typed Text Effect --- */
-.typed-text {
-  display: inline-block;
-  border-right: 2px solid white;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 4s steps(60, end), blink 0.75s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
 /* --- Main Content --- */
 main {
   padding: 40px 20px;
@@ -115,17 +98,6 @@ main {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-section.visible {
-  opacity: 1;
-  transform: none;
 }
 
 /* --- Footer --- */
