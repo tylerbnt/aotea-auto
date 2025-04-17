@@ -69,7 +69,7 @@ nav a:hover {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 30, 60, 0.7);
+  background: rgba(0, 30, 60, 0.45); /* Light overlay */
   z-index: 1;
 }
 
@@ -79,7 +79,7 @@ nav a:hover {
   color: #ffffff;
   text-align: center;
   padding: 0 20px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 .hero-text h2 {
