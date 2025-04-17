@@ -6,40 +6,17 @@ body {
   color: #1a1a1a;
 }
 
-/* --- Logo Section (Replaces Header on Index Page) --- */
+/* --- Logo Banner (Unified for All Pages) --- */
 .logo-banner {
   text-align: center;
-  padding: 20px 10px 0;
-  background-color: transparent;
-}
-
-.logo-banner img {
-  max-width: 240px;
-  height: auto;
-}
-
-/* --- Header (Used on Other Pages) --- */
-header {
-  text-align: center;
-  padding: 60px 10px;
-  background-color: #e0ebf5;
+  padding: 40px 10px 20px;
+  background-color: #e6f0fa;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-header img {
-  max-width: 260px;
+.logo-banner img {
+  max-width: 300px;
   height: auto;
-}
-
-header h1 {
-  margin: 10px 0 5px;
-  font-size: 2rem;
-  color: #ffffff;
-}
-
-header p {
-  font-size: 1rem;
-  color: #aad4f5;
 }
 
 /* --- Navigation --- */
