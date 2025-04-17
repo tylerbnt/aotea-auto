@@ -3,9 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Services | Aotea Auto</title>
+  <title>Services | Aotea Auto</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background-color: #f2f7fc;
+      color: #1a1a1a;
+    }
+    header {
+      text-align: center;
+      padding: 20px 10px;
+    }
+    header img {
+      max-width: 300px;
+      height: auto;
+    }
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 2rem;
+      color: #003366;
+    }
+    header p {
+      font-size: 1rem;
+      color: #0077cc;
+    }
+    nav {
+      background: #003366;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('services-hero.jpg') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 51, 102, 0.6);
+      z-index: 0;
+    }
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      padding: 0 20px;
+    }
+    .hero-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    h2, h3 {
+      color: #003366;
+    }
+    .service-item {
+      margin-bottom: 30px;
+    }
+    .price {
+      font-weight: bold;
+      color: #0077cc;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #003366;
+      color: white;
+    }
+    .book-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0077cc;
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 99;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -22,39 +130,40 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section class="hero" style="background: url('services-hero.jpg') center/cover no-repeat;">
+  <section class="hero">
     <div class="hero-text">
       <h2>Our Services</h2>
-      <p>Everything your car needs to shine — inside and out.</p>
+      <p>Premium care packages to suit every vehicle.</p>
     </div>
   </section>
 
   <main>
     <section>
-      <h2>Exterior Detailing</h2>
-      <p>Thorough hand wash, wax, wheel cleaning, and more to bring out the best in your vehicle’s exterior finish.</p>
-
-      <h2>Interior Detailing</h2>
-      <p>Deep vacuuming, surface wipe-downs, and conditioning of all materials including leather, plastic, and vinyl.</p>
-
-      <h2>Paint Correction</h2>
-      <p>Removes swirl marks, scratches, and oxidation for a flawless paint finish.</p>
-
-      <h2>Upholstery Deep Cleaning</h2>
-      <p>Full shampoo and stain removal for fabric seats and carpeted areas.</p>
-
-      <h2>Dura-Seal Application</h2>
-      <p>High-end protective coating for paint and interior surfaces to keep your vehicle looking newer, longer.</p>
-
-      <h3>Pricing (starting from):</h3>
-      <ul>
-        <li>Exterior Detail: $120</li>
-        <li>Interior Detail: $140</li>
-        <li>Full Detail Combo: $240</li>
-        <li>Paint Correction: $300</li>
-        <li>Upholstery Cleaning: $160</li>
-        <li>Dura-Seal Application: $400</li>
-      </ul>
+      <div class="service-item">
+        <h3>Exterior Detailing</h3>
+        <p>Thorough wash, clay bar treatment, wax and shine.</p>
+        <p class="price">From $120</p>
+      </div>
+      <div class="service-item">
+        <h3>Interior Detailing</h3>
+        <p>Vacuuming, interior wipe-down, vents and console detailing.</p>
+        <p class="price">From $100</p>
+      </div>
+      <div class="service-item">
+        <h3>Paint Correction</h3>
+        <p>Machine polishing to restore shine and remove imperfections.</p>
+        <p class="price">From $250</p>
+      </div>
+      <div class="service-item">
+        <h3>Upholstery Deep Cleaning</h3>
+        <p>Steam cleaning and stain removal for fabric or leather.</p>
+        <p class="price">From $80</p>
+      </div>
+      <div class="service-item">
+        <h3>Dura-Seal Application</h3>
+        <p>Long-lasting paint protection to preserve your vehicle’s finish.</p>
+        <p class="price">From $300</p>
+      </div>
     </section>
   </main>
 
