@@ -2,19 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Aotea Auto</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <header>
-    <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" />
-    <h1>Aotea Auto</h1>
-    <p>Wellington's premium auto detailing service</p>
+  <header class="logo-banner">
+    <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" class="logo">
   </header>
-
+  
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -26,42 +23,28 @@
   <main>
     <section class="visible">
       <h2>Contact Us</h2>
-      <p>Ready to book or have a question? Get in touch with us today.</p>
-
-      <div style="margin-top: 30px;">
-        <h3>Contact Details</h3>
-        <p><strong>Phone:</strong> <a href="tel:+6441234567">+64 4 123 4567</a></p>
-        <p><strong>Email:</strong> <a href="mailto:info@aoteaauto.co.nz">info@aoteaauto.co.nz</a></p>
-        <p><strong>Address:</strong> 123 Aotea Street, Wellington, New Zealand</p>
-      </div>
-
-      <div style="margin-top: 40px;">
-        <h3>Booking Form</h3>
-        <form action="mailto:info@aoteaauto.co.nz" method="POST" enctype="text/plain">
-          <label for="name">Name:</label><br />
-          <input type="text" id="name" name="name" required style="width:100%; padding:10px; margin-bottom:15px;" /><br />
-
-          <label for="email">Email:</label><br />
-          <input type="email" id="email" name="email" required style="width:100%; padding:10px; margin-bottom:15px;" /><br />
-
-          <label for="service">Service Required:</label><br />
-          <input type="text" id="service" name="service" style="width:100%; padding:10px; margin-bottom:15px;" /><br />
-
-          <label for="message">Message:</label><br />
-          <textarea id="message" name="message" rows="5" style="width:100%; padding:10px; margin-bottom:15px;"></textarea><br />
-
-          <button type="submit" style="background:#0077cc; color:white; padding:12px 24px; border:none; border-radius:6px; font-weight:600;">Send</button>
-        </form>
-      </div>
+      <p>Have a question or want to book a detailing service? Get in touch with us below.</p>
+      <ul>
+        <li><strong>Phone:</strong> 04 123 4567</li>
+        <li><strong>Email:</strong> info@aoteaauto.co.nz</li>
+        <li><strong>Address:</strong> 123 Aotea Quay, Wellington, NZ</li>
+      </ul>
+      <form action="mailto:info@aoteaauto.co.nz" method="post" enctype="text/plain">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required><br />
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required><br />
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="5" required></textarea><br />
+        <input type="submit" value="Send Message">
+      </form>
     </section>
   </main>
 
   <a href="contact.html" class="book-button">Book Now</a>
 
   <footer>
-    &copy; 2025 Aotea Auto. All rights reserved.
+    <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
-
