@@ -103,6 +103,20 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       z-index: 99;
     }
+    .typed-text {
+      display: inline-block;
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 4s steps(60, end), blink 0.75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
   </style>
 </head>
 <body>
@@ -123,7 +137,7 @@
   <section class="hero">
     <div class="hero-text">
       <h2>Premium Detailing for Every Drive</h2>
-      <p>Exterior and interior perfection — tailored for Wellington roads.</p>
+      <p><span class="typed-text">Exterior and interior perfection — tailored for Wellington roads.</span></p>
     </div>
   </section>
 
@@ -141,3 +155,4 @@
   <a href="contact.html" class="book-button">Book Now</a>
 </body>
 </html>
+
