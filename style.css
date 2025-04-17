@@ -15,8 +15,8 @@ body {
 }
 
 .logo-banner img {
-  width: 260px;
-  max-width: 100%;
+  width: 220px;
+  max-width: 90%;
   height: auto;
   display: inline-block;
 }
