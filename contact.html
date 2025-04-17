@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Booking - Aotea Auto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="fade-in">
+    <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" class="logo">
+    <h1>Contact & Booking</h1>
+    <p>Get in touch or book your detailing service</p>
+  </header>
+
+  <nav class="fade-in">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="fade-in">
+    <section class="contact-info">
+      <h2>Contact Us</h2>
+      <p><strong>Phone:</strong> 04 123 4567</p>
+      <p><strong>Email:</strong> <a href="mailto:info@aoteaauto.co.nz">info@aoteaauto.co.nz</a></p>
+      <p><strong>Visit Us:</strong> 123 Aotea Street, Wellington</p>
+    </section>
+
+    <section class="booking-form">
+      <h2>Book a Detailing Appointment</h2>
+      <form action="#" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="service">Service Requested:</label>
+        <select id="service" name="service">
+          <option value="exterior">Exterior Detailing</option>
+          <option value="interior">Interior Detailing</option>
+          <option value="paint">Paint Correction</option>
+          <option value="upholstery">Upholstery Deep Cleaning</option>
+          <option value="duraseal">Dura-Seal Application</option>
+        </select>
+
+        <label for="message">Additional Notes:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Submit Booking</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="fade-in">
+    <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
+  </footer>
+
+  <!-- Floating Booking Button -->
+  <a href="contact.html" class="book-button">Book Now</a>
+</body>
+</html>

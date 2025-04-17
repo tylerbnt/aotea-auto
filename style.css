@@ -1,0 +1,217 @@
+:root {
+  --primary-color: #0073e6;
+  --accent-color: #3399ff;
+  --background-light: #f5f9ff;
+  --text-color: #222;
+  --header-font: 'Outfit', sans-serif;
+  --transition: all 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: var(--header-font);
+  background: var(--background-light);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  max-width: 250px;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0;
+}
+
+nav {
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+/* Services */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* Testimonials */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  font-style: italic;
+  position: relative;
+}
+
+.testimonial-card span {
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Contact Form */
+.contact-info {
+  margin-bottom: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.booking-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, select, textarea {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  background: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover {
+  background: var(--accent-color);
+}
+
+/* Booking Button */
+.book-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.9rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: var(--transition);
+  z-index: 99;
+}
+
+.book-button:hover {
+  background: var(--accent-color);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #eaf3ff;
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 4rem;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
