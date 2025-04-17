@@ -2,130 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Testimonials | Aotea Auto</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Outfit', sans-serif;
-      background-color: #f2f7fc;
-      color: #1a1a1a;
-    }
-    header {
-      text-align: center;
-      padding: 20px 10px;
-    }
-    header img {
-      max-width: 300px;
-      height: auto;
-    }
-    header h1 {
-      margin: 10px 0 5px;
-      font-size: 2rem;
-      color: #003366;
-    }
-    header p {
-      font-size: 1rem;
-      color: #0077cc;
-    }
-    nav {
-      background: #003366;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .hero {
-      background: url('testimonials-hero.jpg') center/cover no-repeat;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 51, 102, 0.6);
-      z-index: 0;
-    }
-    .hero-text {
-      position: relative;
-      z-index: 1;
-      padding: 0 20px;
-    }
-    .hero-text h2 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    .hero-text p {
-      font-size: 1.2rem;
-    }
-    main {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    }
-    h2 {
-      color: #003366;
-    }
-    .testimonial {
-      background-color: #eaf4fc;
-      border-left: 5px solid #0077cc;
-      padding: 20px;
-      margin-bottom: 30px;
-      border-radius: 5px;
-    }
-    .testimonial p {
-      font-style: italic;
-    }
-    .testimonial .author {
-      margin-top: 10px;
-      font-weight: bold;
-      color: #003366;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #003366;
-      color: white;
-    }
-    .book-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #0077cc;
-      color: white;
-      padding: 1rem 1.5rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      z-index: 99;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <header>
-    <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo">
+    <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" />
     <h1>Aotea Auto</h1>
     <p>Wellington's premium auto detailing service</p>
   </header>
@@ -133,39 +18,38 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
     <a href="testimonials.html">Testimonials</a>
+    <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h2>Testimonials</h2>
-      <p>See what our happy clients are saying about us.</p>
-    </div>
-  </section>
-
   <main>
-    <section>
-      <div class="testimonial">
-        <p>"Absolutely incredible job on my ute! It hasn’t looked this good since the day I bought it. Will be back for regular detailing."</p>
-        <div class="author">— Jamie T.</div>
-      </div>
-      <div class="testimonial">
-        <p>"The team at Aotea Auto are professionals. The paint correction was flawless and the interior looked brand new. Highly recommend."</p>
-        <div class="author">— Sophie M.</div>
-      </div>
-      <div class="testimonial">
-        <p>"Fast, friendly and amazing attention to detail. Booking was easy and the result exceeded expectations."</p>
-        <div class="author">— Mark D.</div>
-      </div>
+    <section class="visible">
+      <h2>What Our Customers Say</h2>
+      <blockquote>
+        "Absolutely blown away by the attention to detail. My car looks brand new again. Will definitely be back!"<br>
+        <strong>- Sarah M.</strong>
+      </blockquote>
+      <blockquote>
+        "Professional, friendly, and the results speak for themselves. Highly recommend Aotea Auto."<br>
+        <strong>- James W.</strong>
+      </blockquote>
+      <blockquote>
+        "The paint correction service was top notch. They took great care of my classic car."<br>
+        <strong>- Priya T.</strong>
+      </blockquote>
+      <blockquote>
+        "Interior looked like it just came out of the showroom. Thanks team!"<br>
+        <strong>- Mike R.</strong>
+      </blockquote>
     </section>
   </main>
 
+  <a href="contact.html" class="book-button">Book Now</a>
+
   <footer>
-    <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
+    &copy; 2025 Aotea Auto. All rights reserved.
   </footer>
 
-  <a href="contact.html" class="book-button">Book Now</a>
 </body>
 </html>
