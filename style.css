@@ -1,186 +1,104 @@
-/* Reset and base styles */
-body {
+/* General Reset */
+* {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f9f9f9;
-  color: #222;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1, h2, h3 {
-  font-weight: 600;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f6f9;
+  color: #333;
+  line-height: 1.6;
 }
 
 a {
   text-decoration: none;
-  color: #007bff;
+  color: #005b96;
 }
 
-nav {
-  background-color: #004080;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 15px 0;
-}
-
-nav a {
-  color: white;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #ffcc00;
-}
-
-/* Logo banner/header */
+/* Logo Banner */
 .logo-banner {
-  background-color: #e6ecf2; /* Lightened for logo visibility */
-  padding: 30px 0; /* Taller header */
+  background-color: #e6ecf2;
+  padding: 40px 0; /* Slightly taller */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .logo-banner img {
-  max-width: 300px;
+  max-width: 280px; /* Slightly larger logo */
   height: auto;
 }
 
-/* Hero section (only appears on index) */
-.hero {
-  position: relative;
-  background-image: url('hero.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* Navigation */
+nav {
+  background-color: #ffffff;
+  padding: 10px 0;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+nav a {
+  margin: 0 15px;
+  font-weight: 600;
+  color: #005b96;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-  color: white;
+nav a:hover {
+  text-decoration: underline;
 }
 
-.hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+/* Main Content */
+main {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
-.hero-content .typewriter {
-  font-size: 1.5rem;
-  font-weight: 400;
+h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 20px;
 }
 
-/* Book now button */
+h3 {
+  font-size: 1.4rem;
+  color: #005b96;
+  margin-top: 25px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* Book Now Button */
 .book-button {
   display: inline-block;
-  margin: 30px auto;
-  padding: 12px 24px;
-  background-color: #007bff;
+  background-color: #005b96;
   color: white;
-  font-size: 1rem;
-  border-radius: 8px;
-  transition: background-color 0.3s;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
   text-align: center;
+  margin: 30px auto;
+  display: block;
+  width: max-content;
+  transition: background-color 0.3s ease;
 }
 
 .book-button:hover {
-  background-color: #0056b3;
-}
-
-/* Page content */
-main {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-main h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-main p {
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-/* Testimonials */
-.testimonial {
-  background-color: #ffffff;
-  border-left: 4px solid #007bff;
-  padding: 15px 20px;
-  margin: 20px 0;
-  font-style: italic;
-}
-
-.testimonial-author {
-  text-align: right;
-  font-weight: 600;
-  color: #333;
-}
-
-/* Gallery */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Contact form */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 600px;
-  margin: auto;
-}
-
-input, textarea {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-button[type="submit"] {
-  background-color: #007bff;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #004080;
 }
 
 /* Footer */
 footer {
-  background-color: #004080;
-  color: white;
   text-align: center;
-  padding: 20px 0;
-  margin-top: 60px;
+  padding: 20px;
+  background-color: #e6ecf2;
+  color: #333;
+  margin-top: 40px;
 }
