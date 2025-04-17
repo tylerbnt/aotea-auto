@@ -6,16 +6,28 @@ body {
   color: #1a1a1a;
 }
 
-/* --- Header --- */
+/* --- Logo Section (Replaces Header on Index Page) --- */
+.logo-banner {
+  text-align: center;
+  padding: 20px 10px 0;
+  background-color: transparent;
+}
+
+.logo-banner img {
+  max-width: 240px;
+  height: auto;
+}
+
+/* --- Header (Used on Other Pages) --- */
 header {
   text-align: center;
   padding: 20px 10px;
-  background-color: #003366;
+  background-color: #004080; /* Lightened to improve readability */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 header img {
-  max-width: 220px;
+  max-width: 200px;
   height: auto;
 }
 
@@ -69,7 +81,7 @@ nav a:hover {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 30, 60, 0.45); /* Light overlay */
+  background: rgba(0, 30, 60, 0.35); /* Lightened to ensure logo visibility */
   z-index: 1;
 }
 
