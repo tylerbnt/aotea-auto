@@ -52,6 +52,7 @@
       text-decoration: underline;
     }
 
+    /* --- Fixed Hero Section --- */
     .hero {
       position: relative;
       height: 400px;
@@ -59,10 +60,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
       background-image: url('hero.jpg');
       background-size: cover;
       background-position: center;
       animation: zoomInHero 10s ease-in-out infinite alternate;
+      z-index: 0;
     }
 
     .hero::after {
@@ -74,11 +85,6 @@
       width: 100%;
       background: rgba(0, 51, 102, 0.6);
       z-index: 1;
-    }
-
-    @keyframes zoomInHero {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.05); }
     }
 
     .hero-text {
@@ -96,6 +102,11 @@
 
     .hero-text p {
       font-size: 1.2rem;
+    }
+
+    @keyframes zoomInHero {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
     }
 
     .typed-text {
