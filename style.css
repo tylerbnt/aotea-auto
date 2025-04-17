@@ -21,13 +21,13 @@ body {
 /* --- Header (Used on Other Pages) --- */
 header {
   text-align: center;
-  padding: 30px 10px;
-  background-color: #e0ebf5; /* Light enough to contrast with the logo */
+  padding: 60px 10px;
+  background-color: #e0ebf5;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 header img {
-  max-width: 240px;
+  max-width: 260px;
   height: auto;
 }
 
@@ -81,7 +81,7 @@ nav a:hover {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 30, 60, 0.35); /* Lightened to ensure logo visibility */
+  background: rgba(0, 30, 60, 0.35);
   z-index: 1;
 }
 
