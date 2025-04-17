@@ -5,18 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aotea Auto</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="fade-in">
+  <header data-aos="fade-down">
     <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" class="logo">
-    <div class="intro-text">
-      <h1>Aotea Auto</h1>
-      <p>Wellington's premium auto detailing service</p>
-    </div>
+    <h1>Aotea Auto</h1>
+    <p>Wellington's premium auto detailing service</p>
   </header>
 
-  <nav class="fade-in">
+  <nav data-aos="fade-up">
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="gallery.html">Gallery</a>
@@ -24,19 +23,27 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <main class="fade-in">
-    <section class="hero">
-      <h2>Professional Car Detailing in Wellington</h2>
-      <p>We specialize in exterior and interior detailing, paint correction, upholstery deep cleaning, and Dura-Seal protection. Discover our premium services and book your appointment today.</p>
-      <a href="contact.html" class="cta-button">Book Now</a>
+  <main>
+    <section data-aos="fade-up">
+      <h2>Welcome to Aotea Auto</h2>
+      <p>We provide high-end car detailing services in Wellington, including paint correction, upholstery deep cleaning, and Dura-Seal protection. Explore our services, check our work, and book your next appointment today.</p>
     </section>
   </main>
 
-  <footer class="fade-in">
+  <footer data-aos="fade-in">
     <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
   </footer>
 
   <!-- Floating Booking Button -->
   <a href="contact.html" class="book-button">Book Now</a>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
 </body>
 </html>
