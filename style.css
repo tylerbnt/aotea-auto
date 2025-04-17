@@ -21,13 +21,13 @@ body {
 /* --- Header (Used on Other Pages) --- */
 header {
   text-align: center;
-  padding: 20px 10px;
-  background-color: #004080; /* Lightened to improve readability */
+  padding: 30px 10px;
+  background-color: #e0ebf5; /* Light enough to contrast with the logo */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 header img {
-  max-width: 200px;
+  max-width: 240px;
   height: auto;
 }
 
