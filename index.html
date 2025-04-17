@@ -53,6 +53,15 @@
       text-align: center;
       color: white;
       position: relative;
+      animation: zoomInHero 10s ease-in-out infinite alternate;
+    }
+    @keyframes zoomInHero {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.05);
+      }
     }
     .hero::after {
       content: '';
@@ -155,4 +164,3 @@
   <a href="contact.html" class="book-button">Book Now</a>
 </body>
 </html>
-
