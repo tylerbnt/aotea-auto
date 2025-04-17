@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aotea Auto</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -22,13 +22,6 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h2>Premium Detailing for Every Drive</h2>
-      <p><span class="typed-text">Exterior and interior perfection — tailored for Wellington roads.</span></p>
-    </div>
-  </section>
-
   <main>
     <section>
       <h2>Welcome to Aotea Auto</h2>
@@ -39,21 +32,5 @@
   <footer>
     <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
   </footer>
-
-  <a href="contact.html" class="book-button">Book Now</a>
-
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('main section').forEach(section => {
-      observer.observe(section);
-    });
-  </script>
 </body>
 </html>
