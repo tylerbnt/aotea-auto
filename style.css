@@ -11,22 +11,15 @@ header {
   text-align: center;
   padding: 20px 10px;
 }
-
 header img {
-  max-width: 300px;
-  max-height: 100px;
+  max-width: 220px;
   height: auto;
-  width: auto;
-  display: block;
-  margin: 0 auto;
 }
-
 header h1 {
   margin: 10px 0 5px;
   font-size: 2rem;
   color: #003366;
 }
-
 header p {
   font-size: 1rem;
   color: #0077cc;
@@ -38,14 +31,12 @@ nav {
   padding: 10px;
   text-align: center;
 }
-
 nav a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
   font-weight: 600;
 }
-
 nav a:hover {
   text-decoration: underline;
 }
@@ -58,19 +49,24 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('hero.jpg');
-  background-size: cover;
-  background-position: center;
 }
 
-.hero::after {
-  content: '';
+.hero::before {
+  content: "";
+  background: url('hero.jpg') center/cover no-repeat;
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+  top: 0; left: 0;
   width: 100%;
-  background: rgba(0, 51, 102, 0.6);
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 51, 102, 0.5);
   z-index: 1;
 }
 
@@ -102,14 +98,7 @@ main {
 }
 
 section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-section.visible {
-  opacity: 1;
-  transform: none;
+  margin-bottom: 40px;
 }
 
 /* --- Footer --- */
@@ -133,4 +122,22 @@ footer {
   font-weight: 600;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   z-index: 99;
+}
+
+/* --- Typed Text Effect Placeholder --- */
+.typed-text {
+  display: inline-block;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(60, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
 }
