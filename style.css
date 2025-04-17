@@ -49,19 +49,10 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hero-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
   background-image: url('hero.jpg');
   background-size: cover;
   background-position: center;
   animation: zoomInHero 12s ease-in-out infinite alternate;
-  z-index: 0;
 }
 
 .hero::after {
@@ -158,4 +149,3 @@ footer {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   z-index: 99;
 }
-
