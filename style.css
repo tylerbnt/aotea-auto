@@ -1,7 +1,7 @@
 /* --- Global Styles --- */
 body {
   margin: 0;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: #f2f7fc;
   color: #1a1a1a;
 }
@@ -12,17 +12,19 @@ header {
   padding: 20px 10px;
 }
 header img {
-  max-width: 220px;
+  max-width: 280px;
   height: auto;
 }
 header h1 {
   margin: 10px 0 5px;
   font-size: 2rem;
+  font-family: 'Playfair Display', serif;
   color: #003366;
 }
 header p {
   font-size: 1rem;
   color: #0077cc;
+  font-weight: 500;
 }
 
 /* --- Navigation --- */
@@ -36,6 +38,7 @@ nav a {
   margin: 0 15px;
   text-decoration: none;
   font-weight: 600;
+  font-family: 'Inter', sans-serif;
 }
 nav a:hover {
   text-decoration: underline;
@@ -51,22 +54,26 @@ nav a:hover {
   justify-content: center;
 }
 
-.hero::before {
-  content: "";
-  background: url('hero.jpg') center/cover no-repeat;
+.hero-image {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%;
+  top: 0;
+  left: 0;
   height: 100%;
+  width: 100%;
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-position: center;
   z-index: 0;
 }
 
-.hero-overlay {
+.hero::after {
+  content: '';
   position: absolute;
-  top: 0; left: 0;
-  width: 100%;
+  top: 0;
+  left: 0;
   height: 100%;
-  background: rgba(0, 51, 102, 0.5);
+  width: 100%;
+  background: rgba(0, 51, 102, 0.55);
   z-index: 1;
 }
 
@@ -76,6 +83,7 @@ nav a:hover {
   color: white;
   text-align: center;
   padding: 20px;
+  font-family: 'Playfair Display', serif;
 }
 
 .hero-text h2 {
@@ -85,6 +93,24 @@ nav a:hover {
 
 .hero-text p {
   font-size: 1.2rem;
+}
+
+/* --- Typed Text Effect --- */
+.typed-text {
+  display: inline-block;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(60, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
 }
 
 /* --- Main Content --- */
@@ -97,8 +123,24 @@ main {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
+main h2, main h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+main p, li {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
 section {
-  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: none;
 }
 
 /* --- Footer --- */
@@ -122,22 +164,5 @@ footer {
   font-weight: 600;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   z-index: 99;
-}
-
-/* --- Typed Text Effect Placeholder --- */
-.typed-text {
-  display: inline-block;
-  border-right: 2px solid white;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 4s steps(60, end), blink 0.75s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
+  font-family: 'Inter', sans-serif;
 }
