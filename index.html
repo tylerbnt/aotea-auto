@@ -3,38 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aotea Auto - Premium Detailing</title>
+  <title>Aotea Auto</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Logo Banner -->
+  <!-- Logo Section -->
   <div class="logo-banner">
-    <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" />
+    <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo">
   </div>
 
   <!-- Navigation -->
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
     <a href="testimonials.html">Testimonials</a>
+    <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <div class="hero">
     <div class="hero-text">
-      <h2>Wellington's premium auto detailing service</h2>
-      <p><span class="typed-text">Exterior Detailing • Interior Deep Cleaning • Paint Correction • Dura-Seal Application</span></p>
+      <h2>Wellington’s Premium Auto Detailing Service</h2>
+      <p><span class="typed-text">Exterior & Interior Detailing • Paint Correction • Dura-Seal Protection</span></p>
     </div>
-  </section>
+  </div>
 
   <!-- Main Content -->
   <main>
     <section class="visible">
       <h2>Welcome to Aotea Auto</h2>
-      <p>We are Wellington's trusted auto detailing professionals. Whether you're after a showroom shine or an interior deep clean, our expert team will take care of your vehicle with precision and care.</p>
+      <p>We provide premium automotive detailing services in Wellington, New Zealand. From full exterior and interior cleaning to paint correction and Dura-Seal protection, we take pride in restoring your vehicle’s appearance.</p>
+      <p>Book your appointment today and experience the Aotea Auto difference.</p>
     </section>
   </main>
 
@@ -45,34 +48,5 @@
   <footer>
     &copy; 2025 Aotea Auto. All rights reserved.
   </footer>
-
-  <!-- Typewriter Script -->
-  <script>
-    const typedText = document.querySelector(".typed-text");
-    const phrases = ["Exterior Detailing", "Interior Deep Cleaning", "Paint Correction", "Dura-Seal Application"];
-    let currentPhraseIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function type() {
-      const currentPhrase = phrases[currentPhraseIndex];
-      if (isDeleting) {
-        typedText.textContent = currentPhrase.substring(0, charIndex--);
-        if (charIndex < 0) {
-          isDeleting = false;
-          currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-        }
-      } else {
-        typedText.textContent = currentPhrase.substring(0, charIndex++);
-        if (charIndex > currentPhrase.length) {
-          isDeleting = true;
-          setTimeout(type, 800);
-          return;
-        }
-      }
-      setTimeout(type, isDeleting ? 50 : 100);
-    }
-    type();
-  </script>
 </body>
 </html>
