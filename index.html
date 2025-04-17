@@ -4,21 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aotea Auto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      background-color: #f0f8ff;
+      background-color: #f9fbfd;
       color: #333;
     }
     header {
-      background: linear-gradient(135deg, #005f99, #0088cc);
+      background: linear-gradient(135deg, #0073e6, #00bfff);
       color: white;
-      padding: 2rem;
+      padding: 4rem 2rem;
       text-align: center;
     }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
     nav {
-      background-color: #004c7f;
+      background-color: #005fa3;
       padding: 1rem;
       text-align: center;
     }
@@ -26,79 +31,48 @@
       color: white;
       margin: 0 1rem;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #cceeff;
     }
     section {
-      padding: 2rem;
-      max-width: 800px;
+      padding: 3rem 1rem;
+      max-width: 1000px;
       margin: auto;
     }
     h2 {
-      color: #005f99;
+      color: #005fa3;
+      border-bottom: 2px solid #e0ecf9;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
     }
-    .price-list ul {
-      list-style: none;
-      padding: 0;
+    .service-list li {
+      background: #eaf5ff;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
-    .price-list li {
-      margin: 0.5rem 0;
+    .testimonial {
+      background: #f0f8ff;
+      padding: 1rem;
+      border-left: 5px solid #00bfff;
+      margin: 1rem 0;
+      border-radius: 5px;
     }
     footer {
       background-color: #004c7f;
       color: white;
       text-align: center;
-      padding: 1rem;
+      padding: 2rem 1rem;
     }
     iframe {
       width: 100%;
-      height: 500px;
+      height: 600px;
       border: none;
+      border-radius: 8px;
     }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Aotea Auto</h1>
-    <p>Wellington's premium auto detailing service</p>
-  </header>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-    <a href="#booking">Booking</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Welcome to Aotea Auto, where your car gets the care it deserves. We offer high-end auto detailing services right here in Wellington. Whether it's a full interior clean or professional paint correction, we've got you covered.</p>
-  </section>
-
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Exterior Detailing - $120</li>
-      <li>Interior Detailing - $140</li>
-      <li>Paint Correction - From $250</li>
-      <li>Upholstery Deep Cleaning - $100</li>
-      <li>Dura-Seal Application - From $200</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> 0123 456 789</p>
-    <p><strong>Email:</strong> info@aoteaauto.nz</p>
-    <p><strong>Visit Us:</strong> 123 Main Street, Wellington</p>
-  </section>
-
-  <section id="booking">
-    <h2>Book a Service</h2>
-    <p>Fill out the form below to request a booking. We'll get back to you to confirm.</p>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdxxxxxxxxxxxxxxxxxx/viewform?embedded=true">Loading…</iframe>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+    .hero-image {
+      background: url('https://images.unsplash.com/photo-1615206179378-27c07c1a0e4f?auto=format&fit=crop&w=1200&q=
