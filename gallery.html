@@ -2,19 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery | Aotea Auto</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <header>
-    <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" />
-    <h1>Aotea Auto</h1>
-    <p>Wellington's premium auto detailing service</p>
+  <header class="logo-banner">
+    <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" class="logo">
   </header>
-
+  
   <nav>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -26,12 +23,12 @@
   <main>
     <section class="visible">
       <h2>Gallery</h2>
-      <p>See the stunning transformations and detailing results from our recent work:</p>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
-        <img src="gallery1.jpg" alt="Detailing result 1" style="width: 100%; border-radius: 8px;" />
-        <img src="gallery2.jpg" alt="Detailing result 2" style="width: 100%; border-radius: 8px;" />
-        <img src="gallery3.jpg" alt="Detailing result 3" style="width: 100%; border-radius: 8px;" />
-        <img src="gallery4.jpg" alt="Detailing result 4" style="width: 100%; border-radius: 8px;" />
+      <p>Check out some of our recent detailing work:</p>
+      <div class="gallery-grid">
+        <img src="images/gallery1.jpg" alt="Detailed car 1" />
+        <img src="images/gallery2.jpg" alt="Detailed car 2" />
+        <img src="images/gallery3.jpg" alt="Detailed car 3" />
+        <img src="images/gallery4.jpg" alt="Detailed car 4" />
       </div>
     </section>
   </main>
@@ -39,8 +36,7 @@
   <a href="contact.html" class="book-button">Book Now</a>
 
   <footer>
-    &copy; 2025 Aotea Auto. All rights reserved.
+    <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
