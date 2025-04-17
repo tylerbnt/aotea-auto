@@ -9,14 +9,16 @@ body {
 /* --- Logo Banner (Unified for All Pages) --- */
 .logo-banner {
   text-align: center;
-  padding: 40px 10px 20px;
-  background-color: #e6f0fa;
+  padding: 30px 10px 10px;
+  background-color: #e0ebf5;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .logo-banner img {
-  max-width: 300px;
+  width: 260px;
+  max-width: 100%;
   height: auto;
+  display: inline-block;
 }
 
 /* --- Navigation --- */
