@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aotea Auto | Wellington's Premium Auto Detailing Service</title>
+  <title>Aotea Auto</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header class="logo-banner">
     <div class="container">
-      <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo">
+      <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" class="site-logo" />
     </div>
   </header>
 
@@ -23,11 +23,12 @@
   </nav>
 
   <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Wellington's premium auto detailing service</h1>
-      <p id="typewriter"></p>
-      <a href="contact.html" class="book-button">Book Now</a>
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h1>Wellington's Premium Auto Detailing Service</h1>
+        <p id="typewriter"></p>
+        <a href="contact.html" class="btn">Book Now</a>
+      </div>
     </div>
   </section>
 
@@ -38,16 +39,19 @@
   </footer>
 
   <script>
-    const text = "Exterior & Interior Detailing, Paint Correction, Upholstery Deep Cleaning, Dura-Seal Application";
-    let i = 0;
-    function typeWriter() {
-      if (i < text.length) {
-        document.getElementById("typewriter").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 50);
+    const typewriter = document.getElementById("typewriter");
+    const text = "Exterior & Interior Detailing · Paint Correction · Upholstery Cleaning · Dura-Seal Application";
+    let index = 0;
+
+    function type() {
+      if (index < text.length) {
+        typewriter.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 50);
       }
     }
-    window.onload = typeWriter;
+
+    type();
   </script>
 </body>
 </html>
