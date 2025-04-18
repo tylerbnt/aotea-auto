@@ -1,4 +1,4 @@
-/* Base Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ body {
 /* Header and Logo */
 header.logo-banner {
   background-color: rgba(255, 255, 255, 0.92);
-  padding: 14px 0; /* Slightly increased */
+  padding: 16px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -26,7 +26,7 @@ header .container {
 }
 
 .site-logo {
-  height: 80px; /* Slightly increased from 70px */
+  height: 75px; /* Slightly increased from original size */
   max-width: 100%;
 }
 
@@ -49,7 +49,7 @@ nav a:hover {
   color: #ffd700;
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
   position: relative;
   height: 90vh;
@@ -86,7 +86,7 @@ nav a:hover {
   font-size: 1.4rem;
 }
 
-/* Typewriter effect */
+/* Typewriter Effect */
 .typewriter {
   overflow: hidden;
   border-right: .15em solid white;
@@ -105,7 +105,7 @@ nav a:hover {
   50% { border-color: white }
 }
 
-/* Sections */
+/* Page Sections */
 section.visible {
   padding: 60px 20px;
   background-color: #fff;
@@ -126,7 +126,7 @@ section.visible {
   margin-bottom: 20px;
 }
 
-/* Contact */
+/* Contact Grid */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
