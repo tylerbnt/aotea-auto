@@ -2,19 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aotea Auto | Wellington's Premium Auto Detailing Service</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" class="hero-logo">
-      <h1>Wellington's premium auto detailing service</h1>
-      <p class="typewriter">Exterior & Interior Detailing | Paint Correction | Upholstery Deep Cleaning | Dura-Seal</p>
-      <a href="contact.html" class="book-button">Book Now</a>
+  <header class="logo-banner">
+    <div class="container">
+      <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo">
     </div>
   </header>
 
@@ -26,6 +22,15 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Wellington's premium auto detailing service</h1>
+      <p id="typewriter"></p>
+      <a href="contact.html" class="book-button">Book Now</a>
+    </div>
+  </section>
+
   <footer>
     <div class="container">
       <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
@@ -33,21 +38,16 @@
   </footer>
 
   <script>
-    const text = "Exterior & Interior Detailing | Paint Correction | Upholstery Deep Cleaning | Dura-Seal";
+    const text = "Exterior & Interior Detailing, Paint Correction, Upholstery Deep Cleaning, Dura-Seal Application";
     let i = 0;
-    const speed = 50;
-    const typewriter = document.querySelector(".typewriter");
-
-    function type() {
+    function typeWriter() {
       if (i < text.length) {
-        typewriter.textContent += text.charAt(i);
+        document.getElementById("typewriter").innerHTML += text.charAt(i);
         i++;
-        setTimeout(type, speed);
+        setTimeout(typeWriter, 50);
       }
     }
-
-    typewriter.textContent = ""; // Clear initial
-    type();
+    window.onload = typeWriter;
   </script>
 </body>
 </html>
