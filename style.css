@@ -1,128 +1,56 @@
-/* Base styles */
-body {
+/* Base Reset */
+* {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f9f9f9;
-  color: #222;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f8fb;
+  color: #333;
+}
+
+/* Container */
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 
-/* Header */
-header.logo-banner.consistent-header {
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 24px 0; /* Slightly increased */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+/* Header & Logo */
+header.logo-banner {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px 0;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.site-logo {
-  height: 80px; /* Slightly larger */
+header.logo-banner .site-logo {
+  max-height: 80px;
+  height: auto;
   width: auto;
-  max-width: 100%;
 }
 
-/* Navigation */
+/* Nav */
 nav {
-  background-color: #003366;
+  background-color: #1d3557;
   text-align: center;
   padding: 10px 0;
 }
 
 nav a {
   color: white;
-  margin: 0 15px;
   text-decoration: none;
+  margin: 0 15px;
   font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #a8dadc;
 }
 
-/* Main Section */
-main {
-  padding: 40px 0;
-}
-
-section.visible {
-  background-color: #fff;
-  padding: 40px 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-}
-
-/* Contact Page */
-.contact-heading {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.contact-intro {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #555;
-}
-
-.contact-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.card {
-  background-color: #f2f2f2;
-  padding: 25px;
-  border-radius: 10px;
-  flex: 1 1 300px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-/* Contact Form */
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.contact-form button {
-  background-color: #003366;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.contact-form button:hover {
-  background-color: #005299;
-}
-
-/* Footer */
-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 14px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .contact-grid {
-    flex-direction: column;
-  }
-
-  .site-logo {
-    height: 70px;
-  }
-}
+/* Hero Section
