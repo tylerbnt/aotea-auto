@@ -208,36 +208,40 @@ footer p {
 
 .services-page .services-overview {
   padding: 50px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
-.services-page .service-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-  gap: 20px;
-}
-
-.services-page .service-item:nth-child(even) {
-  flex-direction: row-reverse; /* Alternate layout for visual variety */
-}
-
-.services-page .service-image {
-  max-width: 300px;
+.service-box {
+  background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.services-page .service-details {
-  flex: 1;
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.services-page .service-details h2 {
-  font-size: 1.8rem;
+.service-box-image {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 2px solid #0b3d91;
+  margin-bottom: 15px;
+}
+
+.service-box h2 {
+  font-size: 1.5rem;
   color: #0b3d91;
   margin-bottom: 10px;
 }
 
-.services-page .service-details p {
+.service-box p {
   font-size: 1rem;
   color: #333;
 }
