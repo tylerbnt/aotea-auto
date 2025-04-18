@@ -230,7 +230,8 @@ footer p {
 
 .service-box-image {
   max-width: 100%;
-  height: auto;
+  height: 200px; /* Fixed height to ensure uniform size */
+  object-fit: cover; /* Ensures images scale and crop proportionally */
   border-bottom: 2px solid #0b3d91;
   margin-bottom: 15px;
 }
