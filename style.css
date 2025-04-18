@@ -15,12 +15,12 @@ body {
 /* Logo Banner/Header */
 .logo-banner {
   background-color: rgba(255, 255, 255, 0.85);
-  padding: 25px 0; /* Increased padding slightly more */
+  padding: 30px 0; /* Increased padding slightly more */
   text-align: center;
 }
 
 .site-logo {
-  max-width: 300px; /* Increased the max width further */
+  max-width: 325px; /* Increased the max width further */
   height: auto;
 }
 
