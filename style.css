@@ -1,183 +1,56 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-/* Logo Banner/Header */
-.logo-banner {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 30px 0; /* Increased padding slightly more */
+/* Services Hero Section */
+.services-hero {
+  background-color: #f0f8ff; /* Matches the light blue header styling */
+  padding: 50px 20px;
   text-align: center;
 }
 
-.site-logo {
-  max-width: 425px; /* Increased the max width further */
-  height: auto;
-}
-
-/* Navigation */
-nav {
-  background-color: #0b3d91;
-  display: flex;
-  justify-content: center;
-  padding: 12px 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #a8d0e6;
-}
-
-/* Hero Section */
-.hero {
-  background-image: url('hero.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 75vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.hero-content {
-  position: relative;
-  color: white;
-  text-align: center;
-  max-width: 800px;
-  padding: 20px;
-}
-
-.hero-content h1 {
-  font-size: 2.8rem;
+.services-hero h1 {
+  font-size: 2.5rem;
+  color: #0b3d91;
   margin-bottom: 10px;
 }
 
-.typewriter {
+.services-hero p {
   font-size: 1.2rem;
-  font-weight: 400;
-  opacity: 0.9;
-}
-
-.book-now-btn {
-  background-color: #0b3d91;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
-  margin-top: 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.book-now-btn:hover {
-  background-color: #092d6c;
-}
-
-/* Main Sections */
-main {
-  padding: 40px 20px;
-}
-
-.container {
-  max-width: 1000px;
+  color: #333;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
-.visible h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #0b3d91;
+/* Services Overview Section */
+.services-overview {
+  padding: 50px 20px;
 }
 
-.card {
-  background-color: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-
-/* Contact Page Specific */
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact-form button {
-  background-color: #0b3d91;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #092d6c;
-}
-
-/* Gallery Page */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+.service-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
   gap: 20px;
 }
 
-.gallery-grid img {
-  width: 100%;
-  height: auto;
+.service-item:nth-child(even) {
+  flex-direction: row-reverse; /* Alternate layout for visual variety */
+}
+
+.service-image {
+  max-width: 300px;
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
-footer {
-  background-color: #0b3d91;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
+.service-details {
+  flex: 1;
 }
 
-footer p {
-  margin: 0;
+.service-details h2 {
+  font-size: 1.8rem;
+  color: #0b3d91;
+  margin-bottom: 10px;
+}
+
+.service-details p {
+  font-size: 1rem;
+  color: #333;
 }
