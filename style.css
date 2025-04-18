@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -14,8 +14,8 @@ body {
 
 /* Header and Logo */
 header.logo-banner {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 14px 0; /* Slightly increased */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -26,7 +26,7 @@ header .container {
 }
 
 .site-logo {
-  height: 70px;
+  height: 80px; /* Slightly increased from 70px */
   max-width: 100%;
 }
 
@@ -49,7 +49,7 @@ nav a:hover {
   color: #ffd700;
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   position: relative;
   height: 90vh;
@@ -126,7 +126,7 @@ section.visible {
   margin-bottom: 20px;
 }
 
-/* Contact Section */
+/* Contact */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
