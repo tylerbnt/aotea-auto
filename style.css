@@ -21,12 +21,12 @@ body {
 /* Header */
 .consistent-header {
   background-color: white;
-  padding: 20px 0; /* Slight increase from default */
+  padding: 24px 0; /* Slight increase from 20px */
   text-align: center;
 }
 
 .site-logo {
-  height: 75px; /* Slight increase from previous size */
+  height: 68px; /* Slight increase from 60-65px */
   max-width: 100%;
   object-fit: contain;
 }
@@ -110,7 +110,7 @@ h2 {
   text-align: center;
 }
 
-/* Services, Testimonials, Gallery Grids */
+/* Grid Layouts */
 .services-grid, .gallery-grid, .testimonials-grid, .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -188,5 +188,9 @@ footer {
 
   .hero p {
     font-size: 1rem;
+  }
+
+  .site-logo {
+    height: 60px; /* Responsive size adjustment */
   }
 }
