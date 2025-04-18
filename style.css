@@ -1,4 +1,4 @@
-/* General Reset */
+/* ========== Reset & Base Styles ========== */
 * {
   margin: 0;
   padding: 0;
@@ -7,175 +7,161 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
+  background-color: #f3f6f9;
   color: #333;
+  line-height: 1.6;
 }
 
-/* Logo Banner/Header */
-.logo-banner {
-  background-color: rgba(255, 255, 255, 0.85);
+/* ========== Containers ========== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ========== Header & Logo ========== */
+.consistent-header {
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 22px 0; /* Slightly increased */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 1000;
+}
+
+.site-logo {
+  height: 65px; /* Slightly increased from ~55px */
+  max-width: 100%;
+}
+
+/* ========== Navigation ========== */
+nav {
+  background-color: #0d2b47;
   padding: 15px 0;
   text-align: center;
 }
 
-.site-logo {
-  max-width: 250px;
-  height: auto;
-}
-
-/* Navigation */
-nav {
-  background-color: #0b3d91;
-  display: flex;
-  justify-content: center;
-  padding: 12px 0;
-}
-
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  margin: 0 15px;
+  margin: 0 20px;
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #a8d0e6;
+  color: #00bcd4;
 }
 
-/* Hero Section */
+/* ========== Hero Section ========== */
 .hero {
-  background-image: url('hero.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 75vh;
-  position: relative;
+  background: url('your-hero-image.jpg') center/cover no-repeat;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  position: relative;
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  color: white;
-  text-align: center;
-  max-width: 800px;
-  padding: 20px;
+  z-index: 2;
+  color: #fff;
 }
 
 .hero-content h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
-.typewriter {
-  font-size: 1.2rem;
-  font-weight: 400;
-  opacity: 0.9;
+.hero-content p {
+  font-size: 1.3rem;
 }
 
-.book-now-btn {
-  background-color: #0b3d91;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
-  margin-top: 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.book-now-btn:hover {
-  background-color: #092d6c;
-}
-
-/* Main Sections */
+/* ========== Main Section ========== */
 main {
-  padding: 40px 20px;
+  padding: 40px 0;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.visible h2 {
+main h2 {
   font-size: 2rem;
-  margin-bottom: 15px;
-  color: #0b3d91;
-}
-
-.card {
-  background-color: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  color: #0d2b47;
 }
 
-/* Contact Page Specific */
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+/* ========== Cards ========== */
+.card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 30px;
 }
 
+/* ========== Forms ========== */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 12px;
-  margin-bottom: 15px;
+  margin: 10px 0 20px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-size: 1rem;
 }
 
 .contact-form button {
-  background-color: #0b3d91;
-  color: white;
+  background-color: #0d2b47;
+  color: #fff;
   border: none;
-  padding: 12px 20px;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
-  border-radius: 5px;
   transition: background 0.3s ease;
 }
 
 .contact-form button:hover {
-  background-color: #092d6c;
+  background-color: #005577;
 }
 
-/* Gallery Page */
+/* ========== Gallery ========== */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
 }
 
 .gallery-grid img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
+/* ========== Map Embed ========== */
+.map-embed iframe {
+  width: 100%;
+  border: 0;
+  border-radius: 6px;
+  margin-top: 15px;
+}
+
+/* ========== Footer ========== */
 footer {
-  background-color: #0b3d91;
-  color: white;
-  text-align: center;
+  background-color: #0d2b47;
+  color: #fff;
   padding: 20px 0;
+  text-align: center;
   margin-top: 40px;
-}
-
-footer p {
-  margin: 0;
 }
