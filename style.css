@@ -116,21 +116,40 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Services Cards */
+/* Services Page Layout Fixes */
+.services-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible grid layout */
+  gap: 20px; /* Space between cards */
+  margin-top: 20px; /* Add spacing above */
+}
+
 .service-box {
   background-color: #e6f2ff; /* Softer blue background */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
   text-align: center;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: slideInUp 0.5s ease-in-out; /* Animation added */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures equal spacing between content */
+  height: 100%; /* Full height for consistency */
+  max-width: 100%; /* Prevent cards from overflowing */
 }
 
 .service-box:hover {
   transform: translateY(-10px); /* Lift effect */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.service-box img {
+  width: 100%; /* Full width of the card */
+  height: 200px; /* Fixed height for all images */
+  object-fit: cover; /* Ensures images are cropped properly */
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .service-box h2 {
@@ -142,6 +161,7 @@ main {
 .service-box p {
   font-size: 1rem;
   color: #555;
+  flex-grow: 1; /* Ensures text takes available space */
 }
 
 /* Footer */
