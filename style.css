@@ -1,92 +1,131 @@
-body {
+/* Reset and global styles */
+* {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f4;
-  color: #222;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header.logo-banner {
-  background-color: rgba(255, 255, 255, 0.92);
-  padding: 16px 0;
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* Header & logo */
+.logo-banner {
+  background-color: #f0f0f0;
+  padding: 10px 0;
   text-align: center;
 }
 
-header.logo-banner img {
-  height: 70px;
+.logo-banner img {
+  height: 80px;
   max-width: 100%;
-  width: auto;
+  object-fit: contain;
 }
 
+/* Navigation */
 nav {
-  background-color: #0d3b66;
+  background-color: #001f3f;
   display: flex;
   justify-content: center;
   gap: 30px;
-  padding: 14px 0;
-  font-weight: 600;
+  padding: 15px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #00bcd4;
 }
 
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('hero.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent overlay */
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content .typed-text {
+  font-size: 1.5rem;
+  color: #00bcd4;
+}
+
+/* Section Layouts */
 main {
   padding: 40px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
 section.visible h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-section.visible p, section.visible h3 {
-  margin-bottom: 1rem;
-}
-
-.book-button {
-  display: block;
-  width: max-content;
-  margin: 40px auto;
-  background-color: #0077b6;
-  color: white;
-  padding: 14px 30px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.book-button:hover {
-  background-color: #005f87;
-}
-
-footer {
   text-align: center;
-  padding: 20px 0;
-  background-color: #0d3b66;
-  color: white;
-  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-/* Gallery styles */
+/* Gallery */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  padding: 0 10px;
 }
 
 .gallery-grid img {
   width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+/* Book Button */
+.book-button {
+  display: block;
+  width: max-content;
+  margin: 40px auto;
+  background-color: #00bcd4;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.book-button:hover {
+  background-color: #0097a7;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #001f3f;
+  color: white;
+  margin-top: 60px;
 }
