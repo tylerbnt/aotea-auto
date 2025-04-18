@@ -132,11 +132,12 @@ main {
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: slideInUp 0.5s ease-in-out; /* Animation added */
+  width: 300px; /* Fixed width for square shape */
+  height: 300px; /* Fixed height for square shape */
+  margin: 0 auto; /* Center the boxes if needed */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures equal spacing between content */
-  height: 100%; /* Full height for consistency */
-  max-width: 100%; /* Prevent cards from overflowing */
+  justify-content: space-between;
 }
 
 .service-box:hover {
@@ -145,23 +146,23 @@ main {
 }
 
 .service-box img {
-  width: 100%; /* Full width of the card */
-  height: 200px; /* Fixed height for all images */
+  width: 100%;
+  height: 70%; /* Take up 70% of the box */
   object-fit: cover; /* Ensures images are cropped properly */
   border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.service-box h2 {
-  font-size: 1.5rem;
-  color: #0b3d91;
   margin-bottom: 10px;
 }
 
+.service-box h2 {
+  font-size: 1.2rem;
+  color: #0b3d91;
+  margin-bottom: 5px;
+}
+
 .service-box p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #555;
-  flex-grow: 1; /* Ensures text takes available space */
+  margin: 0;
 }
 
 /* Footer */
