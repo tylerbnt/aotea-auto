@@ -253,3 +253,43 @@ footer p {
   font-size: 1rem;
   color: #333;
 }
+
+/* Responsive Design */
+
+/* Mobile Styles (for screens smaller than 768px) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack navigation links */
+  }
+
+  .services-overview {
+    grid-template-columns: 1fr; /* Single column for services */
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .service-box {
+    padding: 10px; /* Reduce padding */
+  }
+}
+
+/* Mobile Styles (for screens smaller than 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* Smaller font size for readability */
+  }
+
+  nav a {
+    margin: 10px 0; /* Add vertical spacing between links */
+  }
+
+  .logo-banner {
+    padding: 20px 0; /* Reduce padding for smaller screens */
+  }
+
+  .hero-content {
+    padding: 15px;
+  }
+}
