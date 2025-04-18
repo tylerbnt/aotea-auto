@@ -31,6 +31,10 @@ nav {
   display: flex;
   justify-content: center;
   padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sticky header with shadow */
 }
 
 nav a {
@@ -38,37 +42,27 @@ nav a {
   text-decoration: none;
   margin: 0 15px;
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
   color: #a8d0e6;
-}
-
-nav a.active {
-  border-bottom: 2px solid #a8d0e6;
+  transform: scale(1.1); /* Slight zoom effect */
 }
 
 /* Hero Section */
 .hero {
-  background-image: url('hero.jpg');
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('hero.jpg');
   background-size: cover;
   background-position: center;
   height: 75vh;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
@@ -79,11 +73,13 @@ nav a.active {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5); /* Background for text readability */
   border-radius: 10px;
+  animation: fadeIn 1s ease-in-out; /* Animation added */
 }
 
 .hero-content h1 {
   font-size: 2.8rem;
   margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text readability */
 }
 
 .typewriter {
@@ -92,6 +88,7 @@ nav a.active {
   opacity: 0.9;
 }
 
+/* Buttons */
 .book-now-btn {
   background-color: #0b3d91;
   color: white;
@@ -100,12 +97,15 @@ nav a.active {
   font-size: 1rem;
   margin-top: 20px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+  border-radius: 25px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: all 0.3s ease-in-out;
 }
 
 .book-now-btn:hover {
   background-color: #092d6c;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
 /* Main Sections */
@@ -116,110 +116,7 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.visible h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: #0b3d91;
-}
-
-.card {
-  background-color: #cce6ff; /* Slightly darker blue */
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-
-/* Contact Page Specific */
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact-form button {
-  background-color: #0b3d91;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #092d6c;
-}
-
-/* Gallery Page */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* Footer */
-footer {
-  background-color: #0b3d91;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
-}
-
-footer p {
-  margin: 0;
-}
-
-/* Scoped Styles for Services Page */
-.services-page .services-hero {
-  background-color: #cce6ff; /* Softer blue */
-  padding: 50px 20px;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.services-page .services-hero h1 {
-  font-size: 2.5rem;
-  color: #0b3d91;
-  margin-bottom: 10px;
-}
-
-.services-page .services-hero p {
-  font-size: 1.2rem;
-  color: #333;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.services-page .services-overview {
-  padding: 50px 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
+/* Services Cards */
 .service-box {
   background-color: #e6f2ff; /* Softer blue background */
   border-radius: 10px;
@@ -228,19 +125,12 @@ footer p {
   text-align: center;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideInUp 0.5s ease-in-out; /* Animation added */
 }
 
 .service-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.service-box-image {
-  max-width: 100%;
-  height: 200px; /* Fixed height to ensure uniform size */
-  object-fit: cover; /* Ensures images scale and crop proportionally */
-  border-bottom: 2px solid #0b3d91;
-  margin-bottom: 15px;
+  transform: translateY(-10px); /* Lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
 }
 
 .service-box h2 {
@@ -251,12 +141,62 @@ footer p {
 
 .service-box p {
   font-size: 1rem;
-  color: #333;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #0b3d91, #092d6c);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+footer .social-icons {
+  margin-top: 10px;
+}
+
+footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #a8d0e6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive Design */
-
-/* Mobile Styles (for screens smaller than 768px) */
 @media (max-width: 768px) {
   nav {
     flex-direction: column; /* Stack navigation links */
@@ -271,11 +211,10 @@ footer p {
   }
 
   .service-box {
-    padding: 10px; /* Reduce padding */
+    padding: 15px; /* Reduce padding */
   }
 }
 
-/* Mobile Styles (for screens smaller than 480px) */
 @media (max-width: 480px) {
   body {
     font-size: 14px; /* Smaller font size for readability */
