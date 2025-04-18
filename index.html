@@ -25,7 +25,7 @@
   <section class="hero">
     <div class="hero-content">
       <h1>Wellington's Premium Auto Detailing Service</h1>
-      <p>Restore your vehicle’s shine — inside and out.</p>
+      <p class="typewriter">Restore your vehicle’s shine — inside and out.</p>
       <a href="contact.html">
         <button class="book-now-btn">Book Now</button>
       </a>
@@ -46,5 +46,23 @@
       <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    // Typewriter effect
+    const text = "Restore your vehicle’s shine — inside and out.";
+    const typewriterEl = document.querySelector(".typewriter");
+    let i = 0;
+    typewriterEl.textContent = "";
+
+    function type() {
+      if (i < text.length) {
+        typewriterEl.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 40);
+      }
+    }
+
+    type();
+  </script>
 </body>
 </html>
