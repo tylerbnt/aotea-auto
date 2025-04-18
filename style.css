@@ -8,13 +8,13 @@
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  background-color: #f0f8ff; /* Light blue background for the body */
+  background-color: #e6f2ff; /* Softer blue for the body background */
   color: #333;
 }
 
 /* Logo Banner/Header */
 .logo-banner {
-  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  background-color: #d9ecff; /* Light blue background */
   padding: 30px 0;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
@@ -111,7 +111,7 @@ nav a.active {
 /* Main Sections */
 main {
   padding: 40px 20px;
-  background-color: #ffffff; /* Light background for sections */
+  background-color: #d9ecff; /* Light blue for main sections */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -129,7 +129,7 @@ main {
 }
 
 .card {
-  background-color: #f9fbfd; /* Very light gray */
+  background-color: #cce6ff; /* Slightly darker blue */
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -194,7 +194,7 @@ footer p {
 
 /* Scoped Styles for Services Page */
 .services-page .services-hero {
-  background-color: #e6f7ff; /* Light blue */
+  background-color: #cce6ff; /* Softer blue */
   padding: 50px 20px;
   text-align: center;
   border-radius: 10px;
@@ -221,7 +221,7 @@ footer p {
 }
 
 .service-box {
-  background-color: #f9fbfd; /* Slight gray tint for contrast */
+  background-color: #e6f2ff; /* Softer blue background */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
