@@ -1,48 +1,34 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Base styles */
 body {
+  margin: 0;
   font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background-color: #f7f9fb;
+  background-color: #f9f9f9;
   color: #222;
 }
 
-a {
-  color: #0077cc;
-  text-decoration: none;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-/* Logo Header Consistent Across All Pages */
+/* Header */
 header.logo-banner.consistent-header {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 15px 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 24px 0; /* Slightly increased */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-header .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .site-logo {
-  height: 60px;
-  max-width: 100%;
+  height: 80px; /* Slightly larger */
   width: auto;
+  max-width: 100%;
 }
 
-/* Navigation Bar */
+/* Navigation */
 nav {
-  background-color: #002b45;
+  background-color: #003366;
   text-align: center;
   padding: 10px 0;
 }
@@ -50,131 +36,93 @@ nav {
 nav a {
   color: white;
   margin: 0 15px;
+  text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #00bcd4;
+  text-decoration: underline;
 }
 
-/* Hero Section */
-.hero {
-  position: relative;
-  background: url('your-hero-image.jpg') center/cover no-repeat;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
+/* Main Section */
+main {
+  padding: 40px 0;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.5rem;
-}
-
-.typewriter {
-  display: inline-block;
-  border-right: 2px solid white;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
-  max-width: 100%;
-}
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes blink {
-  from, to { border-color: transparent; }
-  50% { border-color: white; }
-}
-
-/* Section Styles */
 section.visible {
-  padding: 60px 20px;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Cards */
-.card {
-  background-color: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  margin-bottom: 20px;
-}
-
-/* Services Page */
-.service-item h3 {
-  margin-bottom: 0.5rem;
+  background-color: #fff;
+  padding: 40px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
 /* Contact Page */
+.contact-heading {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contact-intro {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
 .contact-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 30px;
+  gap: 30px;
 }
 
-.contact-details, .contact-form {
-  flex: 1 1 45%;
+.card {
+  background-color: #f2f2f2;
+  padding: 25px;
+  border-radius: 10px;
+  flex: 1 1 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-.contact-form input, .contact-form textarea {
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
   width: 100%;
-  margin-bottom: 15px;
   padding: 12px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .contact-form button {
-  padding: 10px 20px;
-  background-color: #002b45;
+  background-color: #003366;
   color: white;
+  padding: 12px 20px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .contact-form button:hover {
-  background-color: #004b70;
+  background-color: #005299;
 }
 
 /* Footer */
 footer {
-  background-color: #002b45;
+  background-color: #003366;
   color: white;
   text-align: center;
   padding: 20px 0;
-  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-grid {
+    flex-direction: column;
+  }
+
+  .site-logo {
+    height: 70px;
+  }
 }
