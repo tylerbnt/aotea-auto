@@ -116,7 +116,109 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Contact Page */
+/* Services Page Layout Fixes */
+.services-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjusted grid size */
+  gap: 20px; /* Space between cards */
+  margin-top: 20px; /* Add spacing above */
+}
+
+.service-box {
+  background-color: #e6f2ff; /* Softer blue background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideInUp 0.5s ease-in-out; /* Animation added */
+  width: 350px; /* Increased width for better space */
+  height: 400px; /* Increased height for text fitting */
+  margin: 0 auto; /* Center the boxes if needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-box:hover {
+  transform: translateY(-10px); /* Lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.service-box img {
+  width: 100%;
+  height: 200px; /* Adjusted fixed height for images */
+  object-fit: cover; /* Ensures images are cropped properly */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.service-box h2 {
+  font-size: 1.5rem;
+  color: #0b3d91;
+  margin-bottom: 10px;
+}
+
+.service-box p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+  padding: 5px; /* Added padding for better spacing */
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #0b3d91, #092d6c);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+footer .social-icons {
+  margin-top: 10px;
+}
+
+footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #a8d0e6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Contact Page (Scoped to only contact page) */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -168,28 +270,9 @@ main {
   border-radius: 8px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
-  }
-
-  .services-overview {
-    grid-template-columns: 1fr; /* Single column for services */
-  }
-
-  .hero-content h1 {
-    font-size: 2rem; /* Adjust font size for smaller screens */
-  }
-
-  .service-box {
-    padding: 15px; /* Reduce padding */
-    width: 100%; /* Allow full width on smaller screens */
-    height: auto; /* Let height adjust naturally */
-  }
-
-  .service-box img {
-    height: 150px; /* Reduced image size for smaller screens */
   }
 }
 
