@@ -2,14 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aotea Auto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aotea Auto | Wellington's Premium Auto Detailing Service</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="logo-banner">
-    <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo">
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" class="hero-logo">
+      <h1>Wellington's premium auto detailing service</h1>
+      <p class="typewriter">Exterior & Interior Detailing | Paint Correction | Upholstery Deep Cleaning | Dura-Seal</p>
+      <a href="contact.html" class="book-button">Book Now</a>
+    </div>
   </header>
 
   <nav>
@@ -20,28 +26,28 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section class="hero">
-    <h1>Wellington's Premium Auto Detailing Service</h1>
-    <p class="typewriter">Restore your car’s shine and comfort with expert care.</p>
-  </section>
-
-  <main>
-    <section class="visible">
-      <h2>Why Choose Aotea Auto?</h2>
-      <p>We are Wellington’s trusted name in auto detailing. From everyday commuters to classic cars, we bring showroom-quality care to every vehicle.</p>
-    </section>
-
-    <section class="visible">
-      <h2>Testimonials</h2>
-      <p><strong>"My car looked brand new! The attention to detail is next-level." – Jamie L.</strong></p>
-      <p><strong>"Professional and friendly service. Highly recommend Aotea Auto." – Priya T.</strong></p>
-    </section>
-  </main>
-
-  <a href="contact.html" class="book-button">Book Now</a>
-
   <footer>
-    <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script>
+    const text = "Exterior & Interior Detailing | Paint Correction | Upholstery Deep Cleaning | Dura-Seal";
+    let i = 0;
+    const speed = 50;
+    const typewriter = document.querySelector(".typewriter");
+
+    function type() {
+      if (i < text.length) {
+        typewriter.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      }
+    }
+
+    typewriter.textContent = ""; // Clear initial
+    type();
+  </script>
 </body>
 </html>
