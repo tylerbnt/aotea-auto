@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Aotea Auto</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="logo-banner">
+  <header class="logo-banner consistent-header">
     <div class="container">
-      <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" class="site-logo" />
+      <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" class="site-logo">
     </div>
   </header>
 
@@ -23,35 +23,28 @@
   </nav>
 
   <section class="hero">
-    <div class="hero-overlay">
-      <div class="hero-text">
-        <h1>Wellington's Premium Auto Detailing Service</h1>
-        <p id="typewriter"></p>
-        <a href="contact.html" class="btn">Book Now</a>
-      </div>
+    <div class="hero-content">
+      <h1>Wellington's Premium Auto Detailing Service</h1>
+      <p>Restore your vehicle’s shine — inside and out.</p>
+      <a href="contact.html">
+        <button class="book-now-btn">Book Now</button>
+      </a>
     </div>
   </section>
+
+  <main>
+    <section class="visible">
+      <div class="container">
+        <h2>Our Services</h2>
+        <p>From full exterior detailing to deep interior cleaning and paint correction, Aotea Auto brings your car back to its best.</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="container">
       <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    const typewriter = document.getElementById("typewriter");
-    const text = "Exterior & Interior Detailing · Paint Correction · Upholstery Cleaning · Dura-Seal Application";
-    let index = 0;
-
-    function type() {
-      if (index < text.length) {
-        typewriter.textContent += text.charAt(index);
-        index++;
-        setTimeout(type, 50);
-      }
-    }
-
-    type();
-  </script>
 </body>
 </html>
