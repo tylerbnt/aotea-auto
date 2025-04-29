@@ -51,77 +51,109 @@ nav a:hover {
 }
 
 /* Hero Section */
-.services-hero {
-  padding: 50px 20px;
-  text-align: center;
-  background-color: #0b3d91;
-  color: white;
-}
-
-.services-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.services-hero p {
-  font-size: 1.2rem;
-}
-
-/* Accordion Styles */
-.services-accordion .accordion-item {
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.services-accordion .accordion-title {
-  background-color: #0b3d91;
-  color: white;
-  font-size: 1.2rem;
-  padding: 15px 20px;
-  text-align: left;
-  border: none;
-  width: 100%;
-  text-transform: uppercase;
+.hero {
+  background-image: url('hero.jpg'); /* Restore the hero image */
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  justify-content: center;
 }
 
-.services-accordion .accordion-title:hover {
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Background for text readability */
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out; /* Animation added */
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text readability */
+}
+
+.typewriter {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.book-now-btn {
+  background-color: #0b3d91;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 25px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: all 0.3s ease-in-out;
+}
+
+.book-now-btn:hover {
+  background-color: #092d6c;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Contact Page */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.contact-grid .card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form .btn-submit {
+  background-color: #0b3d91;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.contact-form .btn-submit:hover {
   background-color: #092d6c;
 }
 
-.services-accordion .accordion-title span {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.services-accordion .accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  background-color: #f9f9f9;
-  padding: 0 20px;
-}
-
-.services-accordion .accordion-content ul {
-  list-style: none;
-  padding: 15px 0;
-}
-
-.services-accordion .accordion-content ul li {
-  margin: 10px 0;
-  font-size: 1rem;
-  color: #333;
-}
-
-.services-accordion .accordion-item.active .accordion-content {
-  max-height: 500px; /* Adjust based on content */
+.map-embed iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: 8px;
 }
 
 /* Footer */
@@ -150,26 +182,14 @@ footer p {
   }
 }
 
-@keyframes slideInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  .services-accordion .accordion-title {
-    font-size: 1rem;
-    padding: 10px 15px;
+  .hero-content h1 {
+    font-size: 2.4rem;
   }
 
-  .services-accordion .accordion-content ul li {
-    font-size: 0.9rem;
+  .contact-grid {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
   }
 }
 
@@ -178,11 +198,7 @@ footer p {
     font-size: 14px; /* Smaller font size for readability */
   }
 
-  .services-hero h1 {
-    font-size: 2rem;
-  }
-
-  .services-hero p {
-    font-size: 1rem;
+  .hero-content {
+    padding: 15px;
   }
 }
