@@ -132,6 +132,31 @@
       <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+  const accordionItems = document.querySelectorAll(".accordion-item");
+
+  accordionItems.forEach((item) => {
+    const title = item.querySelector(".accordion-title");
+    title.addEventListener("click", () => {
+      // Close all other accordion items
+      accordionItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.classList.remove("active");
+          otherItem.querySelector(".accordion-content").style.maxHeight = "0";
+        }
+      });
+
+      // Toggle the clicked accordion item
+      item.classList.toggle("active");
+      const content = item.querySelector(".accordion-content");
+      if (item.classList.contains("active")) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = "0";
+      }
+    });
+  });
+</script>
 </body>
 </html>
 </html>
