@@ -3,88 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aotea Auto</title>
+  <title>Aotea Auto | Wellington Premium Auto Detailing</title>
   <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="logo-banner consistent-header">
-    <div class="container">
-      <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" class="site-logo">
+  <header class="main-header">
+    <div class="container flex-between">
+      <a href="index.html" class="logo">
+        <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="cta-nav">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <!-- ✅ Hero section with background image restored -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Wellington's Premium Auto Detailing Service</h1>
-      <p class="typewriter">Restore your vehicle’s shine — inside and out.</p>
-      <a href="contact.html">
-        <button class="book-now-btn">Book Now</button>
-      </a>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Wellington’s <span class="accent">Premium Auto Detailing</span> Service</h1>
+        <p>Restore your vehicle’s shine — inside and out.</p>
+        <a href="contact.html" class="btn btn-lg">Book Now</a>
+      </div>
+      <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=700&q=80" alt="Clean car" />
+      </div>
     </div>
   </section>
 
-  <main>
-    <!-- Why Choose section -->
-    <section class="why-choose">
-      <div class="container">
-        <h2>Why Choose Aotea Auto?</h2>
-        <div class="why-cards">
-          <div class="why-card">
-            <span class="why-icon">🏡</span>
-            <h3>Locally Owned & Operated</h3>
-            <p>Proudly serving the Wellington community with a personal touch.</p>
-          </div>
-          <div class="why-card">
-            <span class="why-icon">🔍</span>
-            <h3>Exceptional Attention to Detail</h3>
-            <p>Every vehicle gets our full care, inside and out.</p>
-          </div>
-          <div class="why-card">
-            <span class="why-icon">✨</span>
-            <h3>Premium Products & Techniques</h3>
-            <p>We use only the best materials and methods for lasting results.</p>
-          </div>
-          <div class="why-card">
-            <span class="why-icon">👍</span>
-            <h3>Trusted by Locals</h3>
-            <p>Our reputation is built on quality, reliability, and satisfied customers.</p>
-          </div>
+  <section class="features">
+    <div class="container">
+      <h2>Why Choose <span class="accent">Aotea Auto</span>?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><span>🏆</span></div>
+          <h3>Quality Guaranteed</h3>
+          <p>We treat every vehicle as our own, ensuring the highest standards every time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><span>🧼</span></div>
+          <h3>Premium Products</h3>
+          <p>Only the best and safest detailing products—no compromises, just results.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><span>💬</span></div>
+          <h3>Friendly, Local Team</h3>
+          <p>Proudly Porirua-based, we’re passionate about service and community.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><span>⭐</span></div>
+          <h3>5-Star Reputation</h3>
+          <p>Our customers love us—and their cars do, too. See our testimonials!</p>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <section class="services-preview">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=400&q=80" alt="Interior Detailing">
+          <h3>Interior Detailing</h3>
+          <p>Deep cleaning, vacuuming, shampoo, leather & fabric care. Fresh feel, every ride.</p>
+          <a href="services.html" class="link-more">Learn More →</a>
+        </div>
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Exterior Detailing">
+          <h3>Exterior Detailing</h3>
+          <p>Hand wash, wax, paint protection, wheels & glass. Restore your car’s showroom shine.</p>
+          <a href="services.html" class="link-more">Learn More →</a>
+        </div>
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=400&q=80" alt="Paint Correction">
+          <h3>Paint Correction</h3>
+          <p>Remove swirls & scratches, revive faded paint, and protect for the long haul.</p>
+          <a href="services.html" class="link-more">Learn More →</a>
+        </div>
+      </div>
+      <a href="services.html" class="btn btn-outline btn-center">See All Services</a>
+    </div>
+  </section>
+
+  <section class="testimonials-preview">
+    <div class="container">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p>“Absolutely flawless job! My car looks better than new. Friendly team, great communication—highly recommend.”</p>
+          <span class="testimonial-author">– Sam, Porirua</span>
+        </div>
+        <div class="testimonial-card">
+          <p>“Best detailing experience I’ve ever had. The attention to detail is next level. Will be back!”</p>
+          <span class="testimonial-author">– Alex, Wellington</span>
+        </div>
+        <div class="testimonial-card">
+          <p>“Quick, professional, and my car has never looked so good. Thank you, Aotea Auto!”</p>
+          <span class="testimonial-author">– Jamie, Tawa</span>
+        </div>
+      </div>
+      <a href="testimonials.html" class="btn btn-outline btn-center">More Reviews</a>
+    </div>
+  </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo">
+      </div>
+      <div class="footer-info">
+        <p>© 2025 Aotea Auto. All rights reserved.</p>
+        <p>Porirua, Wellington</p>
+        <p>
+          <a href="tel:012345678">012 345 678</a> | 
+          <a href="mailto:info@aoteaauto.co.nz">info@aoteaauto.co.nz</a>
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">Instagram</a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">Facebook</a>
+      </div>
     </div>
   </footer>
-
-  <script>
-    // ✅ Typewriter effect restored
-    const text = "Restore your vehicle’s shine — inside and out.";
-    const typewriterEl = document.querySelector(".typewriter");
-    let i = 0;
-    typewriterEl.textContent = "";
-
-    function type() {
-      if (i < text.length) {
-        typewriterEl.textContent += text.charAt(i);
-        i++;
-        setTimeout(type, 40);
-      }
-    }
-    type();
-  </script>
 </body>
 </html>
