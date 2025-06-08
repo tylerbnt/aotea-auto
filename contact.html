@@ -35,33 +35,47 @@
     </div>
   </section>
 
-  <!-- Contact Form Section -->
+  <!-- Contact/Form and Map Section -->
   <section class="contact-section">
-    <div class="container">
-      <h2>Get in Touch</h2>
-      <form class="contact-form" action="mailto:your@email.com" method="POST" enctype="text/plain">
-        <div class="form-group">
-          <label for="name">Name*</label>
-          <input id="name" name="name" type="text" required>
+    <div class="container contact-flex">
+      <div class="contact-form-wrapper">
+        <h2>Get in Touch</h2>
+        <form class="contact-form" action="mailto:your@email.com" method="POST" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Name*</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel">
+          </div>
+          <div class="form-group">
+            <label for="message">Message*</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-lg">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-map-wrapper">
+        <h2 style="margin-top:0;">Find Us</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2875.222145395114!2d174.8427764766538!3d-41.14365677130263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38a2f7fdc8c59d%3A0xd2b1d7d6f7ce5f37!2sShop%20B%2C%204%20Te%20Puia%20Drive%2C%20Aotea%2C%20Porirua%205024!5e0!3m2!1sen!2snz!4v1717845400000!5m2!1sen!2snz"
+          width="100%" height="260" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Map of Shop B, 4 Te Puia Drive, Aotea, Porirua"></iframe>
+        <div class="contact-address" style="margin-top:1em; color:#b3bbc7;">
+          Shop B, 4 Te Puia Drive<br>
+          Aotea, Porirua 5024
         </div>
-        <div class="form-group">
-          <label for="email">Email*</label>
-          <input id="email" name="email" type="email" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel">
-        </div>
-        <div class="form-group">
-          <label for="message">Message*</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-lg">Send Message</button>
-      </form>
+      </div>
     </div>
   </section>
 
-  <!-- Footer (no map on this page) -->
+  <!-- Footer (no map here) -->
   <footer class="ccc-footer">
     <div class="footer-top footer-container">
       <div class="footer-col footer-col-logo">
@@ -96,7 +110,6 @@
             Sat: 9am–3pm<br>
             Sun: 9am–3pm
           </div>
-          <!-- Map intentionally omitted on this page -->
         </div>
       </div>
     </div>
