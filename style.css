@@ -32,19 +32,19 @@ body {
 .main-header {
   background: #111317;
   border-bottom: 3px solid #3eb4f6;
-  padding: 0.8em 0;
+  padding: 1.4em 0;
   position: sticky;
   top: 0;
   z-index: 10;
 }
 .logo img {
-  height: 38px;
+  height: 56px;
   display: block;
 }
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2em;
+  gap: 2.2em;
   margin: 0;
   padding: 0;
 }
@@ -52,9 +52,9 @@ nav a {
   color: #b3bbc7;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.1em;
+  font-size: 1.3em;
   transition: color 0.15s;
-  padding: 0.2em 0.3em;
+  padding: 0.4em 0.6em;
   border-radius: 5px;
 }
 nav a.active,
@@ -66,8 +66,8 @@ nav a:hover {
   background: #3eb4f6;
   color: #111317 !important;
   border-radius: 20px;
-  padding: 0.3em 1.1em;
-  margin-left: 0.5em;
+  padding: 0.5em 1.2em;
+  margin-left: 0.7em;
   font-weight: 700;
   box-shadow: 0 1px 7px rgba(62,180,246,0.11);
   transition: background 0.15s, color 0.15s;
@@ -81,12 +81,12 @@ nav a:hover {
    Hero Section
    ========================= */
 .hero {
-  background: linear-gradient(120deg, rgba(20,22,26,0.78) 55%, rgba(16,18,23,0.60) 100%), url('hero-bg.jpg') center center/cover no-repeat;
-  min-height: 370px;
+  min-height: 400px;
   display: flex;
   align-items: center;
-  padding: 3.5em 0 3em 0;
+  padding: 4em 0 3em 0;
   position: relative;
+  background: linear-gradient(120deg, rgba(20,22,26,0.78) 55%, rgba(16,18,23,0.60) 100%), url('hero-bg.jpg') center center / cover no-repeat;
 }
 .hero-overlay-content {
   display: flex;
@@ -94,7 +94,7 @@ nav a:hover {
   align-items: flex-start;
 }
 .hero-text h1 {
-  font-size: 2.6em;
+  font-size: 3em;
   font-weight: 700;
   margin: 0 0 0.5em 0;
   color: #fff;
@@ -104,9 +104,9 @@ nav a:hover {
   color: #3eb4f6;
 }
 .hero-text p {
-  font-size: 1.25em;
+  font-size: 1.35em;
   color: #b3bbc7;
-  margin-bottom: 1.2em;
+  margin-bottom: 1.4em;
   max-width: 500px;
 }
 .btn, .btn-lg {
@@ -126,74 +126,6 @@ nav a:hover {
 .btn:hover, .btn-lg:hover {
   background: #fff;
   color: #3eb4f6;
-}
-
-/* =========================
-   Sections (About, Services, etc.)
-   ========================= */
-section {
-  padding: 3em 0;
-}
-h1, h2, h3 {
-  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
-  font-weight: 700;
-  color: #fff;
-  margin-top: 0;
-}
-h1 {
-  font-size: 2.2em;
-}
-h2 {
-  font-size: 1.5em;
-}
-h3 {
-  font-size: 1.2em;
-}
-
-/* =========================
-   Testimonials (Sample)
-   ========================= */
-.testimonials-section {
-  background: #181a20;
-  padding: 3em 0;
-}
-.testimonial {
-  background: #22242c;
-  border-radius: 10px;
-  padding: 1.3em 2em;
-  margin: 1.2em 0;
-  color: #b3bbc7;
-  box-shadow: 0 2px 8px rgba(62,180,246,0.04);
-}
-.testimonial blockquote {
-  margin: 0 0 0.5em 0;
-  font-style: italic;
-  color: #fff;
-}
-.testimonial cite {
-  color: #3eb4f6;
-  font-weight: 600;
-  font-style: normal;
-}
-
-/* =========================
-   Gallery (Sample)
-   ========================= */
-.gallery-section {
-  background: #191b21;
-  padding: 3em 0;
-}
-.gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5em;
-  margin: 2em 0;
-}
-.gallery-grid img {
-  width: 280px;
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(62,180,246,0.09);
 }
 
 /* =========================
@@ -229,7 +161,7 @@ h3 {
   align-items: center;
 }
 .footer-logo-img {
-  height: 42px;
+  height: 60px;
   filter: brightness(1.2);
 }
 .footer-col-nav {
@@ -282,13 +214,22 @@ h3 {
 }
 .footer-hours {
   color: #b3bbc7;
-  font-size: 0.97em;
+  font-size: 1.05em;
   text-align: right;
   margin-top: 0.6em;
   line-height: 1.5;
+  letter-spacing: .02em;
 }
 .footer-map {
   margin-top: 0.4em;
+}
+.footer-map iframe {
+  width: 260px !important;
+  height: 180px !important;
+  border-radius: 12px;
+  margin-top: 14px;
+  border: 0;
+  max-width: 100%;
 }
 .footer-bottom {
   text-align: center;
@@ -308,6 +249,14 @@ h3 {
     align-items: center;
     text-align: center;
   }
+  .footer-logo-img {
+    height: 44px;
+  }
+  .footer-map iframe {
+    width: 100% !important;
+    min-width: 180px;
+    height: 140px !important;
+  }
 }
 
 /* =========================
@@ -323,14 +272,10 @@ h3 {
   nav ul {
     gap: 1em;
   }
-  .gallery-grid {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 @media (max-width: 600px) {
   .logo img {
-    height: 28px;
+    height: 38px;
   }
   .hero {
     min-height: 220px;
