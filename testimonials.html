@@ -4,49 +4,87 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Testimonials | Aotea Auto</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="logo-banner">
-    <div class="container">
-      <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" class="site-logo" />
+  <header class="main-header">
+    <div class="container flex-between">
+      <a href="index.html" class="logo">
+        <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="testimonials.html" class="active">Testimonials</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="cta-nav">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <!-- HERO SECTION WITH UNIQUE IMAGE -->
+  <section class="hero dark-hero" style="background:
+    linear-gradient(120deg, rgba(20,22,26,0.78) 55%, rgba(16,18,23,0.60) 100%),
+    url('https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1200&q=80') center center / cover no-repeat;">
+    <div class="container hero-overlay-content">
+      <div class="hero-text">
+        <h1><span class="accent">Our 5-Star Reputation</span></h1>
+        <p>See what our customers say about the Aotea Auto experience.</p>
+      </div>
+    </div>
+  </section>
 
-  <main>
-    <section class="visible">
-      <div class="container">
-        <h2>Customer Testimonials</h2>
-        <div class="testimonials">
-          <blockquote>
-            <p>“Absolutely the best detailing service in Wellington! My car looks better than when I bought it.”</p>
-            <footer>– Jamie L.</footer>
-          </blockquote>
-          <blockquote>
-            <p>“Top-notch work and attention to detail. I highly recommend Aotea Auto!”</p>
-            <footer>– Priya D.</footer>
-          </blockquote>
-          <blockquote>
-            <p>“Friendly team and flawless results. They got rid of every stain and scratch.”</p>
-            <footer>– Mark S.</footer>
-          </blockquote>
+  <section class="testimonials-list">
+    <div class="container">
+      <h2>Customer Reviews</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p>“Absolutely flawless job! My car looks better than new. Friendly team, great communication—highly recommend.”</p>
+          <span class="testimonial-author">– Sam, Porirua</span>
+        </div>
+        <div class="testimonial-card">
+          <p>“Best detailing experience I’ve ever had. The attention to detail is next level. Will be back!”</p>
+          <span class="testimonial-author">– Alex, Wellington</span>
+        </div>
+        <div class="testimonial-card">
+          <p>“Quick, professional, and my car has never looked so good. Thank you, Aotea Auto!”</p>
+          <span class="testimonial-author">– Jamie, Tawa</span>
+        </div>
+        <div class="testimonial-card">
+          <p>“You can tell these guys love cars. They take pride in their work and it shows!”</p>
+          <span class="testimonial-author">– Morgan, Porirua</span>
+        </div>
+        <div class="testimonial-card">
+          <p>“Flexible booking, great customer service, and my car feels brand new.”</p>
+          <span class="testimonial-author">– Riley, Johnsonville</span>
         </div>
       </div>
-    </section>
-  </main>
+      <div style="text-align:center; margin-top:2em;">
+        <a href="contact.html" class="btn btn-lg">Book Your Detail</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo">
+      </div>
+      <div class="footer-info">
+        <p>© 2025 Aotea Auto. All rights reserved.</p>
+        <p>Porirua, Wellington</p>
+        <p>
+          <a href="tel:012345678">012 345 678</a> | 
+          <a href="mailto:info@aoteaauto.co.nz">info@aoteaauto.co.nz</a>
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">Instagram</a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">Facebook</a>
+      </div>
     </div>
   </footer>
 </body>
