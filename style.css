@@ -1,6 +1,6 @@
-/* =========================
-   Global Styles & Layout
-   ========================= */
+/* ==============
+   Global Styles
+   ============== */
 html {
   scroll-behavior: smooth;
 }
@@ -26,9 +26,9 @@ body {
   align-items: center;
 }
 
-/* =========================
-   Header & Navigation
-   ========================= */
+/* ==============
+   Header & Nav
+   ============== */
 .main-header {
   background: #111317;
   border-bottom: 3px solid #3eb4f6;
@@ -77,16 +77,16 @@ nav a:hover {
   color: #3eb4f6 !important;
 }
 
-/* =========================
+/* ==============
    Hero Section
-   ========================= */
+   ============== */
 .hero {
   min-height: 400px;
   display: flex;
   align-items: center;
   padding: 4em 0 3em 0;
   position: relative;
-  background: linear-gradient(120deg, rgba(20,22,26,0.78) 55%, rgba(16,18,23,0.60) 100%), url('hero-bg.jpg') center center / cover no-repeat;
+  background: linear-gradient(120deg, rgba(20,22,26,0.78) 55%, rgba(16,18,23,0.60) 100%), url('hero.jpg') center center / cover no-repeat;
 }
 .hero-overlay-content {
   display: flex;
@@ -128,9 +128,31 @@ nav a:hover {
   color: #3eb4f6;
 }
 
-/* =========================
-   Footer (Matches Clean Car Collective style)
-   ========================= */
+/* ==============
+   Section Headings & Layout
+   ============== */
+section {
+  padding: 3em 0;
+}
+h1, h2, h3 {
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0;
+}
+h1 {
+  font-size: 2.2em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.2em;
+}
+
+/* ==============
+   Footer
+   ============== */
 .ccc-footer {
   background: #111317;
   color: #fff;
@@ -212,22 +234,30 @@ nav a:hover {
   filter: drop-shadow(0 0 6px #3eb4f6);
   fill: #3eb4f6;
 }
+
+/* --- compact info row (hours + map side-by-side) --- */
+.footer-info-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2em;
+  margin-top: 0.6em;
+}
 .footer-hours {
   color: #b3bbc7;
   font-size: 1.05em;
   text-align: right;
-  margin-top: 0.6em;
   line-height: 1.5;
   letter-spacing: .02em;
+  min-width: 130px;
 }
 .footer-map {
-  margin-top: 0.4em;
+  margin-top: 0;
 }
 .footer-map iframe {
   width: 260px !important;
   height: 180px !important;
   border-radius: 12px;
-  margin-top: 14px;
   border: 0;
   max-width: 100%;
 }
@@ -239,6 +269,8 @@ nav a:hover {
   border-top: 1px solid #20232a;
   margin-top: 0.7em;
 }
+
+/* Responsive: stack hours/map on small screens */
 @media (max-width: 900px) {
   .footer-top {
     flex-direction: column;
@@ -252,6 +284,16 @@ nav a:hover {
   .footer-logo-img {
     height: 44px;
   }
+}
+@media (max-width: 700px) {
+  .footer-info-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  .footer-hours {
+    text-align: center;
+  }
   .footer-map iframe {
     width: 100% !important;
     min-width: 180px;
@@ -259,9 +301,58 @@ nav a:hover {
   }
 }
 
-/* =========================
-   Media Queries
-   ========================= */
+/* ==============
+   Utility
+   ============== */
+.accent {
+  color: #3eb4f6;
+}
+
+/* ==============
+   Other Sections (optional, for testimonials, gallery, etc.)
+   ============== */
+.testimonials-section {
+  background: #181a20;
+  padding: 3em 0;
+}
+.testimonial {
+  background: #22242c;
+  border-radius: 10px;
+  padding: 1.3em 2em;
+  margin: 1.2em 0;
+  color: #b3bbc7;
+  box-shadow: 0 2px 8px rgba(62,180,246,0.04);
+}
+.testimonial blockquote {
+  margin: 0 0 0.5em 0;
+  font-style: italic;
+  color: #fff;
+}
+.testimonial cite {
+  color: #3eb4f6;
+  font-weight: 600;
+  font-style: normal;
+}
+.gallery-section {
+  background: #191b21;
+  padding: 3em 0;
+}
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  margin: 2em 0;
+}
+.gallery-grid img {
+  width: 280px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(62,180,246,0.09);
+}
+
+/* ==============
+   Responsive tweaks for nav, hero, etc.
+   ============== */
 @media (max-width: 900px) {
   .container, .footer-container {
     padding: 0 1em;
@@ -271,6 +362,10 @@ nav a:hover {
   }
   nav ul {
     gap: 1em;
+  }
+  .gallery-grid {
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media (max-width: 600px) {
@@ -284,11 +379,4 @@ nav a:hover {
   .hero-text h1 {
     font-size: 1.2em;
   }
-}
-
-/* =========================
-   Utility
-   ========================= */
-.accent {
-  color: #3eb4f6;
 }
