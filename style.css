@@ -42,14 +42,14 @@ h3 { font-size: 1.05rem; margin-bottom: 0.7rem; }
 .main-header {
   background: #181b21;
   box-shadow: 0 6px 32px 0 rgba(30,40,60,0.19);
-  padding: 0.7em 0 0.5em 0;
+  padding: 1.1em 0 0.8em 0;        /* Ample space for a visible logo */
   border-bottom: 5px solid #3eb4f6;
   position: sticky;
   top: 0;
   z-index: 10;
 }
 .logo img {
-  height: 44px;
+  height: 62px;                   /* Large and readable */
 }
 .flex-between {
   display: flex;
@@ -120,10 +120,20 @@ nav a.cta-nav {
 .hero-img {
   flex: 1 1 350px;
   min-width: 230px;
-  max-width: 380px;
+  max-width: 440px;
   box-shadow: 0 8px 32px 0 rgba(30,40,60,0.18);
   border-radius: 18px;
   overflow: hidden;
+  background: #222c38;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  object-fit: cover;
 }
 
 /* --- Buttons --- */
@@ -377,8 +387,8 @@ footer {
   nav ul { gap: 0.9em; }
   .hero-img { display: none; }
   .hero-text { text-align: center; }
-  .main-header { padding: 0.5em 0 0.3em 0;}
-  .logo img { height: 32px; }
+  .main-header { padding: 0.7em 0 0.5em 0; }
+  .logo img { height: 38px; }
 }
 
 @media (max-width: 480px) {
