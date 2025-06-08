@@ -1,421 +1,116 @@
-/* ==============
-   Global Styles
-   ============== */
-html {
-  scroll-behavior: smooth;
-}
-body {
-  margin: 0;
-  padding: 0;
-  background: #15171b;
-  color: #fff;
-  font-family: 'Poppins', 'Montserrat', Arial, sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | Aotea Auto</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container flex-between">
+      <a href="index.html" class="logo">
+        <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="cta-nav">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2em;
-}
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-overlay-content">
+      <div class="hero-text">
+        <h1><span class="accent">Aotea Auto</span> Detailing</h1>
+        <p>Wellington’s Car Detailing Specialists. Book your car’s transformation today!</p>
+        <a href="contact.html" class="btn btn-lg">Book Now</a>
+      </div>
+    </div>
+  </section>
 
-.flex-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  <!-- Why Choose Us Section (original version) -->
+  <section class="why-choose-us">
+    <div class="container">
+      <h2>Why Choose Us?</h2>
+      <div class="why-features">
+        <div class="why-feature">
+          <span class="why-icon">🚗</span>
+          <h3>Expert Detailers</h3>
+          <p>Our experienced team treats every vehicle as their own, ensuring top-notch results every time.</p>
+        </div>
+        <div class="why-feature">
+          <span class="why-icon">🌟</span>
+          <h3>Quality Products</h3>
+          <p>We use only premium, environmentally friendly products for a brilliant, lasting finish.</p>
+        </div>
+        <div class="why-feature">
+          <span class="why-icon">👍</span>
+          <h3>Customer Satisfaction</h3>
+          <p>We’re committed to your happiness, with 5-star service and flexible bookings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-/* ==============
-   Header & Nav
-   ============== */
-.main-header {
-  background: #111317;
-  border-bottom: 3px solid #3eb4f6;
-  padding: 1.4em 0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-.logo img {
-  height: 56px;
-  display: block;
-}
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2.2em;
-  margin: 0;
-  padding: 0;
-}
-nav a {
-  color: #b3bbc7;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.3em;
-  transition: color 0.15s;
-  padding: 0.4em 0.6em;
-  border-radius: 5px;
-}
-nav a.active,
-nav a:hover {
-  color: #3eb4f6;
-  background: #23262c;
-}
-.cta-nav {
-  background: #3eb4f6;
-  color: #111317 !important;
-  border-radius: 20px;
-  padding: 0.5em 1.2em;
-  margin-left: 0.7em;
-  font-weight: 700;
-  box-shadow: 0 1px 7px rgba(62,180,246,0.11);
-  transition: background 0.15s, color 0.15s;
-}
-.cta-nav:hover {
-  background: #fff;
-  color: #3eb4f6 !important;
-}
-
-/* ==============
-   Hero Section
-   ============== */
-.hero {
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  padding: 4em 0 3em 0;
-  position: relative;
-  background: linear-gradient(120deg, rgba(20,22,26,0.78) 55%, rgba(16,18,23,0.60) 100%), url('hero.jpg') center center / cover no-repeat;
-}
-.hero-overlay-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.hero-text h1 {
-  font-size: 3em;
-  font-weight: 700;
-  margin: 0 0 0.5em 0;
-  color: #fff;
-  letter-spacing: -1px;
-}
-.hero-text .accent {
-  color: #3eb4f6;
-}
-.hero-text p {
-  font-size: 1.35em;
-  color: #b3bbc7;
-  margin-bottom: 1.4em;
-  max-width: 500px;
-}
-.btn, .btn-lg {
-  display: inline-block;
-  background: #3eb4f6;
-  color: #111317;
-  padding: 0.6em 2.4em;
-  border-radius: 24px;
-  font-weight: 700;
-  font-size: 1.07em;
-  text-decoration: none;
-  box-shadow: 0 2px 12px rgba(62,180,246,0.16);
-  transition: background 0.15s, color 0.15s;
-  border: none;
-  cursor: pointer;
-}
-.btn:hover, .btn-lg:hover {
-  background: #fff;
-  color: #3eb4f6;
-}
-
-/* ==============
-   Why Choose Us
-   ============== */
-.why-choose-us {
-  background: #181a20;
-  padding: 3em 0;
-  text-align: center;
-}
-.why-choose-us h2 {
-  font-size: 2em;
-  color: #3eb4f6;
-  margin-bottom: 2em;
-  font-weight: 700;
-}
-.why-features {
-  display: flex;
-  justify-content: center;
-  gap: 2.5em;
-  flex-wrap: wrap;
-}
-.why-feature {
-  background: #23262c;
-  border-radius: 12px;
-  padding: 2em 1.5em;
-  width: 270px;
-  max-width: 90vw;
-  box-shadow: 0 4px 16px rgba(62,180,246,0.07);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1.5em;
-}
-.why-icon {
-  font-size: 2.8em;
-  margin-bottom: 0.5em;
-  display: block;
-}
-.why-feature h3 {
-  color: #fff;
-  margin-top: 0.3em;
-  margin-bottom: 0.7em;
-  font-size: 1.25em;
-  font-weight: 700;
-}
-.why-feature p {
-  color: #b3bbc7;
-  font-size: 1em;
-}
-
-/* Responsive for Why Choose Us */
-@media (max-width: 900px) {
-  .why-features {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2em;
-  }
-  .why-feature {
-    width: 95%;
-  }
-}
-
-/* ==============
-   Footer
-   ============== */
-.ccc-footer {
-  background: #111317;
-  color: #fff;
-  padding-top: 2em;
-  font-size: 1rem;
-  border-top: 4px solid #3eb4f6;
-}
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2em;
-}
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 2em;
-  padding-bottom: 1em;
-}
-.footer-col {
-  flex: 1 1 0;
-  min-width: 180px;
-  box-sizing: border-box;
-}
-.footer-col-logo {
-  display: flex;
-  align-items: center;
-}
-.footer-logo-img {
-  height: 60px;
-  filter: brightness(1.2);
-}
-.footer-col-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6em;
-}
-.footer-col-nav a {
-  color: #b3bbc7;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.05em;
-  transition: color 0.15s;
-}
-.footer-col-nav a.footer-cta {
-  background: #3eb4f6;
-  color: #111317;
-  border-radius: 24px;
-  padding: 0.4em 1.4em;
-  margin-top: 0.5em;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  box-shadow: 0 2px 8px rgba(62,180,246,0.14);
-  text-decoration: none;
-}
-.footer-col-nav a:hover,
-.footer-col-nav a.footer-cta:hover {
-  color: #3eb4f6;
-  background: #fff;
-}
-.footer-col-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.6em;
-}
-.footer-social {
-  display: flex;
-  gap: 0.8em;
-}
-.footer-social svg {
-  display: block;
-  fill: #fff;
-  transition: filter 0.15s, fill 0.15s;
-}
-.footer-social a:hover svg {
-  filter: drop-shadow(0 0 6px #3eb4f6);
-  fill: #3eb4f6;
-}
-
-/* --- compact info row (hours + map side-by-side) --- */
-.footer-info-row {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 2em;
-  margin-top: 0.6em;
-}
-.footer-hours {
-  color: #b3bbc7;
-  font-size: 1.05em;
-  text-align: right;
-  line-height: 1.5;
-  letter-spacing: .02em;
-  min-width: 130px;
-}
-.footer-map {
-  margin-top: 0;
-}
-.footer-map iframe {
-  width: 260px !important;
-  height: 180px !important;
-  border-radius: 12px;
-  border: 0;
-  max-width: 100%;
-}
-.footer-bottom {
-  text-align: center;
-  color: #b3bbc7;
-  font-size: 0.97em;
-  padding: 1em 0 0.5em 0;
-  border-top: 1px solid #20232a;
-  margin-top: 0.7em;
-}
-
-/* Responsive: stack hours/map on small screens */
-@media (max-width: 900px) {
-  .footer-top {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .footer-col-info {
-    align-items: center;
-    text-align: center;
-  }
-  .footer-logo-img {
-    height: 44px;
-  }
-}
-@media (max-width: 700px) {
-  .footer-info-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-  }
-  .footer-hours {
-    text-align: center;
-  }
-  .footer-map iframe {
-    width: 100% !important;
-    min-width: 180px;
-    height: 140px !important;
-  }
-}
-
-/* ==============
-   Utility
-   ============== */
-.accent {
-  color: #3eb4f6;
-}
-
-/* ==============
-   Other Sections (optional, for testimonials, gallery, etc.)
-   ============== */
-.testimonials-section {
-  background: #181a20;
-  padding: 3em 0;
-}
-.testimonial {
-  background: #22242c;
-  border-radius: 10px;
-  padding: 1.3em 2em;
-  margin: 1.2em 0;
-  color: #b3bbc7;
-  box-shadow: 0 2px 8px rgba(62,180,246,0.04);
-}
-.testimonial blockquote {
-  margin: 0 0 0.5em 0;
-  font-style: italic;
-  color: #fff;
-}
-.testimonial cite {
-  color: #3eb4f6;
-  font-weight: 600;
-  font-style: normal;
-}
-.gallery-section {
-  background: #191b21;
-  padding: 3em 0;
-}
-.gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5em;
-  margin: 2em 0;
-}
-.gallery-grid img {
-  width: 280px;
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(62,180,246,0.09);
-}
-
-/* ==============
-   Responsive tweaks for nav, hero, etc.
-   ============== */
-@media (max-width: 900px) {
-  .container, .footer-container {
-    padding: 0 1em;
-  }
-  .hero-text h1 {
-    font-size: 2em;
-  }
-  nav ul {
-    gap: 1em;
-  }
-  .gallery-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media (max-width: 600px) {
-  .logo img {
-    height: 38px;
-  }
-  .hero {
-    min-height: 220px;
-    padding: 2em 0 2em 0;
-  }
-  .hero-text h1 {
-    font-size: 1.2em;
-  }
-}
+  <!-- Footer -->
+  <footer class="ccc-footer">
+    <div class="footer-top footer-container">
+      <div class="footer-col footer-col-logo">
+        <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" class="footer-logo-img">
+      </div>
+      <nav class="footer-col footer-col-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="footer-cta">Book Now</a>
+      </nav>
+      <div class="footer-col footer-col-info">
+        <div class="footer-social">
+          <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" rel="noopener">
+            <!-- Instagram SVG -->
+            <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><path d="M12 2.163c3.204.002 3.584.012 4.85.07 1.206.056 1.984.246 2.446.414a4.927 4.927 0 0 1 1.675.964 4.927 4.927 0 0 1 .964 1.675c.168.462.358 1.24.414 2.446.058 1.266.068 1.646.07 4.85-.002 3.204-.012 3.584-.07 4.85-.056 1.206-.246 1.984-.414 2.446a4.927 4.927 0 0 1-.964 1.675 4.927 4.927 0 0 1-1.675.964c-.462.168-1.24.358-2.446.414-1.266.058-1.646.068-4.85.07-3.204-.002-3.584-.012-4.85-.07-1.206-.056-1.984-.246-2.446-.414a4.927 4.927 0 0 1-1.675-.964 4.927 4.927 0 0 1-.964-1.675c-.168-.462-.358-1.24-.414-2.446C2.175 15.797 2.165 15.417 2.163 12.213c.002-3.204.012-3.584.07-4.85.056-1.206.246-1.984.414-2.446a4.927 4.927 0 0 1 .964-1.675 4.927 4.927 0 0 1 1.675-.964c.462-.168 1.24-.358 2.446-.414C8.416 2.175 8.796 2.165 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.771.13 4.729.392 3.927.792a6.845 6.845 0 0 0-2.497 1.627A6.845 6.845 0 0 0 .792 3.927C.392 4.729.13 5.771.072 7.052.013 8.332 0 8.741 0 12c0 3.259.013 3.668.072 4.948.058 1.281.32 2.323.72 3.125a6.845 6.845 0 0 0 1.627 2.497 6.845 6.845 0 0 0 2.497 1.627c.802.4 1.844.662 3.125.72C8.332 23.987 8.741 24 12 24c3.259 0 3.668-.013 4.948-.072 1.281-.058 2.323-.32 3.125-.72a6.845 6.845 0 0 0 2.497-1.627 6.845 6.845 0 0 0 1.627-2.497c.4-.802.662-1.844.72-3.125.059-1.28.072-1.689.072-4.948 0-3.259-.013-3.668-.072-4.948-.058-1.281-.32-2.323-.72-3.125a6.845 6.845 0 0 0-1.627-2.497 6.845 6.845 0 0 0-2.497-1.627c-.802-.4-1.844-.662-3.125-.72C15.668.013 15.259 0 12 0zm0 5.838A6.162 6.162 0 0 0 5.838 12 6.162 6.162 0 0 0 12 18.162 6.162 6.162 0 0 0 18.162 12 6.162 6.162 0 0 0 12 5.838zm0 10.162A3.999 3.999 0 1 1 12 8a3.999 3.999 0 0 1 0 7.999zm6.406-11.845a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" rel="noopener">
+            <!-- Facebook SVG -->
+            <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.494v-9.294H9.692v-3.622h3.127V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/></svg>
+          </a>
+        </div>
+        <div class="footer-info-row">
+          <div class="footer-hours">
+            <strong>Hours:</strong><br>
+            Mon: 8am–5pm<br>
+            Tue: 8am–5pm<br>
+            Wed: 8am–5pm<br>
+            Thu: 8am–5pm<br>
+            Fri: 8am–5pm<br>
+            Sat: 9am–3pm<br>
+            Sun: 9am–3pm
+          </div>
+          <div class="footer-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2875.222145395114!2d174.8427764766538!3d-41.14365677130263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38a2f7fdc8c59d%3A0xd2b1d7d6f7ce5f37!2sShop%20B%2C%204%20Te%20Puia%20Drive%2C%20Aotea%2C%20Porirua%205024!5e0!3m2!1sen!2snz!4v1717845400000!5m2!1sen!2snz"
+              width="260" height="180"
+              style="border:0; border-radius:12px; margin-top:0; max-width:100%;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              aria-label="Map of Shop B, 4 Te Puia Drive, Aotea, Porirua"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Aotea Auto. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
