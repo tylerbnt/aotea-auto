@@ -71,7 +71,7 @@ nav a:hover {
   color: #3eb4f6 !important;
 }
 
-/* Hero Section */
+/* Hero Section (shared by all pages) */
 .hero {
   min-height: 400px;
   display: flex;
@@ -118,6 +118,69 @@ nav a:hover {
 .btn:hover, .btn-lg:hover {
   background: #fff;
   color: #3eb4f6;
+}
+
+/* Services Section */
+.services-section {
+  background: #191b21;
+  padding: 3em 0;
+}
+.services-section h1 {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #3eb4f6;
+  margin-bottom: 1.2em;
+  text-align: center;
+}
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  margin-top: 2em;
+}
+.service-card {
+  background: #23262c;
+  border-radius: 12px;
+  padding: 2em 1.5em;
+  width: 300px;
+  max-width: 95vw;
+  box-shadow: 0 4px 16px rgba(62,180,246,0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.5em;
+  transition: transform 0.22s cubic-bezier(.4,2,.3,1), box-shadow 0.18s cubic-bezier(.4,2,.3,1);
+  cursor: pointer;
+}
+.service-card:hover,
+.service-card:focus-visible {
+  transform: scale(1.055);
+  box-shadow: 0 8px 32px rgba(62,180,246,0.15), 0 2px 12px rgba(62,180,246,0.10);
+  z-index: 2;
+}
+.service-card h2 {
+  color: #3eb4f6;
+  margin-top: 0;
+  margin-bottom: 0.7em;
+  font-size: 1.18em;
+  font-weight: 700;
+}
+.service-card p {
+  color: #b3bbc7;
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .services-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2em;
+  }
+  .service-card {
+    width: 95%;
+  }
 }
 
 /* Why Choose Us (minimal SVG icons, interactive cards) */
@@ -181,7 +244,6 @@ nav a:hover {
   fill: none;
 }
 
-/* Why Choose Us Responsive */
 @media (max-width: 900px) {
   .why-features {
     flex-direction: column;
