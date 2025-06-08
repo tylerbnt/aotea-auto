@@ -1,162 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services - Aotea Auto</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services | Aotea Auto</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="logo-banner consistent-header">
-    <div class="container">
-      <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo" class="site-logo">
+  <header class="main-header">
+    <div class="container flex-between">
+      <a href="index.html" class="logo">
+        <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="cta-nav">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html" class="active">Services</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <main class="services-page">
-    <!-- Hero Section -->
-    <section class="services-hero">
-      <div class="container">
-        <h1>Our Services</h1>
-        <p>We provide high-quality automotive detailing services to keep your vehicle looking its best.</p>
+  <!-- HERO SECTION -->
+  <section class="hero dark-hero" style="background:
+    linear-gradient(120deg, rgba(20,22,26,0.78) 55%, rgba(16,18,23,0.60) 100%),
+    url('hero.jpg') center center / cover no-repeat;">
+    <div class="container hero-overlay-content">
+      <div class="hero-text">
+        <h1><span class="accent">Our Services</span></h1>
+        <p>Wellington’s finest detailing, restoration, and protection for every vehicle.</p>
+        <a href="contact.html" class="btn btn-lg">Book Your Service</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Services Accordion -->
-    <section class="services-accordion">
-      <div class="container">
-
-        <!-- Full Refresh Package -->
-        <div class="accordion-item">
-          <button class="accordion-title">Full Refresh Package <span>Starting from $295</span></button>
-          <div class="accordion-content">
+  <section class="services-list">
+    <div class="container">
+      <h2>What We Offer</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=400&q=80" alt="Interior Detailing">
+          <h3>Interior Detailing</h3>
+          <p>
             <ul>
-              <li>Exterior pre rinse</li>
-              <li>Exterior thoroughly hand washed</li>
-              <li>Wheels cleaned</li>
-              <li>Exterior windows cleaned</li>
-              <li>Sealant applied to paint</li>
-              <li>Tires & plastic trim dressed</li>
-              <li>All interior surfaces cleaned</li>
-              <li>Carpet & floor mats vacuumed</li>
-              <li>Door jambs cleaned</li>
-              <li>Interior windows cleaned</li>
-              <li>Minor pet hair removal</li>
-              <li>Protectant applied to interior trim</li>
+              <li>Vacuum, dust, and deep clean all surfaces</li>
+              <li>Shampoo seats, mats, and carpets</li>
+              <li>Leather & fabric protection</li>
+              <li>Odour removal, window polish</li>
             </ul>
-          </div>
+          </p>
         </div>
-
-        <!-- Full Renewal Package -->
-        <div class="accordion-item">
-          <button class="accordion-title">Full Renewal Package <span>Starting from $425</span></button>
-          <div class="accordion-content">
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Exterior Detailing">
+          <h3>Exterior Detailing</h3>
+          <p>
             <ul>
-              <li>Exterior pre rinse</li>
-              <li>Paint decontamination with clay bar & iron treatment</li>
-              <li>Exterior thoroughly hand washed</li>
-              <li>Single stage paint correction</li>
-              <li>Wheels cleaned</li>
-              <li>Exterior windows cleaned</li>
-              <li>Deep exterior detail</li>
-              <li>Sealant applied to paint</li>
-              <li>Tires & plastic trim dressed</li>
-              <li>All interior surfaces cleaned</li>
-              <li>Carpet & floor mats vacuumed</li>
-              <li>Interior shampoo treatment</li>
-              <li>Door jambs cleaned</li>
-              <li>Interior windows cleaned</li>
-              <li>Moderate pet hair removal</li>
-              <li>Deep interior detail</li>
-              <li>Protectant applied to interior trim</li>
+              <li>Hand wash & dry</li>
+              <li>Wax & paint sealant</li>
+              <li>Wheel & tyre cleaning</li>
+              <li>Glass, trim, and plastics restored</li>
             </ul>
-          </div>
+          </p>
         </div>
-
-        <!-- Extras -->
-        <div class="accordion-item">
-          <button class="accordion-title">Extras</button>
-          <div class="accordion-content">
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=400&q=80" alt="Paint Correction">
+          <h3>Paint Correction</h3>
+          <p>
             <ul>
-              <li>Heavy pet hair removal</li>
-              <li>Mould treatment</li>
-              <li>Leather conditioning</li>
-              <li>Odour treatment</li>
-              <li>Carpet shampoo treatment/stain removal</li>
-              <li>Signage removal</li>
-              <li>Headlight restoration</li>
-              <li>Engine bay detail</li>
-              <li>Stone chip repair</li>
-              <li>Paint touch up</li>
+              <li>Machine polishing to remove swirls/scratches</li>
+              <li>Paint decontamination & clay bar</li>
+              <li>Gloss restoration</li>
+              <li>Protective coating upgrade available</li>
             </ul>
-          </div>
+          </p>
         </div>
-
-        <!-- Paint Correction Services -->
-        <div class="accordion-item">
-          <button class="accordion-title">Paint Correction Services</button>
-          <div class="accordion-content">
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1511918984145-48de785d4c4e?auto=format&fit=crop&w=400&q=80" alt="Headlight Restoration">
+          <h3>Headlight Restoration</h3>
+          <p>
             <ul>
-              <li>Cut & Polish: Minimum 2 step machine polish</li>
-              <li>Full rejuvenation package: Includes DuraSeal exterior application</li>
+              <li>Remove yellowing & haze</li>
+              <li>Restore clarity and brightness</li>
+              <li>Protect against future fading</li>
             </ul>
-          </div>
+          </p>
         </div>
-
-        <!-- DuraSeal -->
-        <div class="accordion-item">
-          <button class="accordion-title">DuraSeal</button>
-          <div class="accordion-content">
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=400&q=80" alt="Engine Bay Cleaning">
+          <h3>Engine Bay Cleaning</h3>
+          <p>
             <ul>
-              <li>Exterior protection: DuraSeal paint protection applied to car paint</li>
-              <li>Interior protection: DuraSeal interior protection applied to car seats & interior trim</li>
+              <li>Safe degreasing and wash</li>
+              <li>Plastic/vinyl dressings for a like-new look</li>
+              <li>All work done with care—no harsh chemicals</li>
             </ul>
-          </div>
+          </p>
         </div>
-
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?auto=format&fit=crop&w=400&q=80" alt="Fleet & Commercial">
+          <h3>Fleet & Commercial</h3>
+          <p>
+            <ul>
+              <li>Flexible plans for businesses</li>
+              <li>On-site or workshop service</li>
+              <li>Volume pricing available</li>
+            </ul>
+          </p>
+        </div>
       </div>
-    </section>
-  </main>
+      <div style="text-align:center; margin-top:2em;">
+        <a href="contact.html" class="btn btn-lg">Request a Quote</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Aotea Auto. All rights reserved.</p>
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo">
+      </div>
+      <div class="footer-info">
+        <p>© 2025 Aotea Auto. All rights reserved.</p>
+        <p>Porirua, Wellington</p>
+        <p>
+          <a href="tel:012345678">012 345 678</a> | 
+          <a href="mailto:info@aoteaauto.co.nz">info@aoteaauto.co.nz</a>
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">Instagram</a>
+        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">Facebook</a>
+      </div>
     </div>
   </footer>
-  <script>
-  const accordionItems = document.querySelectorAll(".accordion-item");
-
-  accordionItems.forEach((item) => {
-    const title = item.querySelector(".accordion-title");
-    title.addEventListener("click", () => {
-      // Close all other accordion items
-      accordionItems.forEach((otherItem) => {
-        if (otherItem !== item) {
-          otherItem.classList.remove("active");
-          otherItem.querySelector(".accordion-content").style.maxHeight = "0";
-        }
-      });
-
-      // Toggle the clicked accordion item
-      item.classList.toggle("active");
-      const content = item.querySelector(".accordion-content");
-      if (item.classList.contains("active")) {
-        content.style.maxHeight = content.scrollHeight + "px";
-      } else {
-        content.style.maxHeight = "0";
-      }
-    });
-  });
-</script>
 </body>
-</html>
 </html>
