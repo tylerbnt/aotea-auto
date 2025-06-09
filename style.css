@@ -71,7 +71,7 @@ nav a:hover {
   color: #3eb4f6 !important;
 }
 
-/* Hero Section (shared by all pages) */
+/* Hero Section */
 .hero {
   min-height: 400px;
   display: flex;
@@ -120,24 +120,32 @@ nav a:hover {
   color: #3eb4f6;
 }
 
-/* Services Section */
+/* Service Sections */
 .services-section {
   background: #191b21;
   padding: 3em 0;
 }
-.services-section h1 {
-  font-size: 2.2em;
-  font-weight: 700;
+.service-category {
+  margin-bottom: 3em;
+}
+.service-category h2 {
+  font-size: 1.5em;
   color: #3eb4f6;
-  margin-bottom: 1.2em;
-  text-align: center;
+  margin-bottom: 0.4em;
+  margin-top: 0;
+  font-weight: 700;
+}
+.service-category p {
+  color: #b3bbc7;
+  margin-bottom: 1.4em;
+  font-size: 1.1em;
 }
 .services-list {
   display: flex;
   flex-wrap: wrap;
   gap: 2em;
   justify-content: center;
-  margin-top: 2em;
+  margin-top: 0;
 }
 .service-card {
   background: #23262c;
@@ -159,7 +167,7 @@ nav a:hover {
   box-shadow: 0 8px 32px rgba(62,180,246,0.15), 0 2px 12px rgba(62,180,246,0.10);
   z-index: 2;
 }
-.service-card h2 {
+.service-card h3 {
   color: #3eb4f6;
   margin-top: 0;
   margin-bottom: 0.7em;
@@ -171,7 +179,6 @@ nav a:hover {
   font-size: 1em;
   margin-bottom: 0;
 }
-
 @media (max-width: 900px) {
   .services-list {
     flex-direction: column;
@@ -238,7 +245,7 @@ nav a:hover {
   }
 }
 
-/* Why Choose Us (minimal SVG icons, interactive cards) */
+/* Why Choose Us Section */
 .why-choose-us {
   background: #181a20;
   padding: 3em 0;
@@ -298,7 +305,6 @@ nav a:hover {
   stroke: #b3bbc7;
   fill: none;
 }
-
 @media (max-width: 900px) {
   .why-features {
     flex-direction: column;
@@ -573,7 +579,6 @@ nav a:hover {
   filter: drop-shadow(0 0 6px #3eb4f6);
   fill: #3eb4f6;
 }
-/* --- compact info row (hours + map side-by-side) --- */
 .footer-info-row {
   display: flex;
   flex-direction: row;
@@ -607,8 +612,6 @@ nav a:hover {
   border-top: 1px solid #20232a;
   margin-top: 0.5em;
 }
-
-/* Responsive: footer and layout tweaks */
 @media (max-width: 1100px) {
   .footer-logo-img {
     height: 64px;
