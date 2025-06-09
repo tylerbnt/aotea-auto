@@ -6,6 +6,88 @@
   <title>Services | Aotea Auto</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Suggested enhancements for visual appeal and UX. Add these to your style.css for production. */
+    .services-list { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: flex-start; }
+    .service-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      padding: 2rem 1.5rem 1.5rem 1.5rem;
+      position: relative;
+      flex: 1 1 270px;
+      min-width: 270px;
+      max-width: 340px;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: box-shadow 0.2s;
+    }
+    .service-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.16); }
+    .service-badge {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      background: #1b7c5d;
+      color: #fff;
+      font-size: 0.95rem;
+      padding: 0.4em 1em;
+      border-radius: 12px;
+      font-weight: 700;
+      z-index: 2;
+      letter-spacing: 0.03em;
+      box-shadow: 0 2px 8px rgba(27,124,93,0.12);
+      text-transform: uppercase;
+    }
+    .service-card.popular .service-badge,
+    .service-card .service-badge { background: #e67e22; }
+    .service-card .service-badge[aria-label="Best for Pre-Sale"] { background: #1b7c5d; }
+    .service-icon { display: block; margin-bottom: 0.6rem; }
+    .faq-section {
+      background: #f7faf7;
+      border-radius: 16px;
+      margin-top: 3rem;
+      padding: 2.5rem 1.2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+    .faq-list { max-width: 600px; margin: 0 auto; }
+    .faq-item { margin-bottom: 1.35rem; border-radius: 8px; }
+    .faq-question {
+      width: 100%;
+      background: #fff;
+      border: none;
+      text-align: left;
+      padding: 1.1rem 1rem 1.1rem 1.5rem;
+      font-size: 1.08rem;
+      font-family: inherit;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.18s;
+      position: relative;
+    }
+    .faq-question.active, .faq-item.open .faq-question { background: #e5f6ed; }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      background: #f6fefb;
+      border-radius: 0 0 8px 8px;
+      transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1);
+      padding: 0 1.5rem;
+      font-size: 1rem;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 200px;
+      padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 800px) {
+      .services-list { flex-direction: column; align-items: stretch; }
+      .service-card { max-width: 100%; min-width: 0; }
+    }
+    .footer-map iframe { width: 100% !important; min-width: 210px; border-radius: 12px; }
+  </style>
 </head>
 <body>
   <header class="main-header">
@@ -36,7 +118,6 @@
 
   <section class="services-section">
     <div class="container">
-
       <!-- Detailing Packages -->
       <div class="service-category">
         <h2>Detailing Packages</h2>
@@ -57,7 +138,7 @@
             </ul>
           </div>
           <div class="service-card">
-            <span class="service-badge">Best for Pre-Sale</span>
+            <span class="service-badge" aria-label="Best for Pre-Sale">Best for Pre-Sale</span>
             <span class="service-icon">
               <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="16" cy="16" r="12"/>
@@ -108,7 +189,7 @@
         <div class="services-list">
           <div class="service-card">
             <h3>Dura-Seal Premium</h3>
-            <p>Creates a durable ceramic barrier that protects paintwork from environmental damage, making cleaning easier with no need for waxing or polishing. <br><strong>Expected lifespan:</strong> up to 5 years.</p>
+            <p>Creates a durable ceramic barrier that protects paintwork from environmental damage, making cleaning easier with no need for waxing or polishing. <br><strong>Expected lifespan:</strong> Up to 5 years.</p>
           </div>
           <div class="service-card popular">
             <span class="service-badge">Most Popular</span>
@@ -149,46 +230,40 @@
       </div>
 
       <!-- FAQ Section -->
-      <section class="faq-section">
+      <section class="faq-section" aria-label="Frequently Asked Questions">
         <div class="container">
           <h2>Frequently Asked Questions</h2>
           <div class="faq-list">
-
             <div class="faq-item">
-              <button class="faq-question">How long does a detail or paint correction take?</button>
+              <button class="faq-question" aria-expanded="false">How long does a detail or paint correction take?</button>
               <div class="faq-answer">
-                <p>Most detailing packages take between 2–6 hours depending on size and condition. Paint correction and ceramic coatings can require a full day or more—ask us for an estimate for your car.</p>
+                <p>Most detailing packages take between 2–6 hours depending on size and condition. Paint correction and ceramic coatings can require a full day or more—ask us for an estimate based on your needs.</p>
               </div>
             </div>
-
             <div class="faq-item">
-              <button class="faq-question">How long do Dura-Seal ceramic coatings last?</button>
+              <button class="faq-question" aria-expanded="false">How long do Dura-Seal ceramic coatings last?</button>
               <div class="faq-answer">
                 <p>Dura-Seal Premium lasts up to 5 years, while Dura-Seal Ultra can last up to 8 years with correct aftercare.</p>
               </div>
             </div>
-
             <div class="faq-item">
-              <button class="faq-question">What areas do you serve?</button>
+              <button class="faq-question" aria-expanded="false">What areas do you serve?</button>
               <div class="faq-answer">
                 <p>We’re based in Aotea, Porirua and service the greater Wellington region. Get in touch to check if we can come to you!</p>
               </div>
             </div>
-
             <div class="faq-item">
-              <button class="faq-question">How do I care for my car after ceramic coating?</button>
+              <button class="faq-question" aria-expanded="false">How do I care for my car after ceramic coating?</button>
               <div class="faq-answer">
                 <p>Avoid automatic car washes; hand wash with a pH-neutral shampoo and soft mitt. We can provide aftercare advice specific to your coating.</p>
               </div>
             </div>
-
             <div class="faq-item">
-              <button class="faq-question">Do you offer mobile services?</button>
+              <button class="faq-question" aria-expanded="false">Do you offer mobile services?</button>
               <div class="faq-answer">
                 <p>Yes, we offer both studio and mobile services. Some services (like ceramic coatings) may require studio application for best results.</p>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -212,11 +287,11 @@
       <div class="footer-col footer-col-info">
         <div class="footer-social">
           <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" rel="noopener">
-            <!-- Instagram SVG -->
+            <!-- Instagram SVG (unchanged) -->
             <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><path d="M12 2.163c3.204.002 3.584.012 4.85.07 1.206.056 1.984.246 2.446.414a4.927 4.927 0 0 1 1.675.964 4.927 4.927 0 0 1 ..."/></svg>
           </a>
           <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" rel="noopener">
-            <!-- Facebook SVG -->
+            <!-- Facebook SVG (unchanged) -->
             <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.494v-9.294H9.692v-3.622h3.127V8.413c0-3...."/></svg>
           </a>
         </div>
@@ -233,13 +308,18 @@
           </div>
           <div class="footer-map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2875.222145395114!2d174.8427764766538!3d-41.14365677130263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38a2f7fdc..."/>
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2875.222145395114!2d174.8427764766538!3d-41.14365677130263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38a2f7fdc..."
               width="260" height="180"
-              style="border:0; border-radius:12px; margin-top:0; max-width:100%;"
+              style="border:0; border-radius:12px; margin-top:0; max-width:100%; min-width:210px;"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              aria-label="Map of Shop B, 4 Te Puia Drive, Aotea, Porirua"></iframe>
+              aria-label="Map of Shop B, 4 Te Puia Drive, Aotea, Porirua"
+              title="Aotea Auto Location"
+            ></iframe>
+            <noscript>
+              <a href="https://goo.gl/maps/xxxx" target="_blank" rel="noopener">View Map</a>
+            </noscript>
           </div>
         </div>
       </div>
@@ -254,16 +334,15 @@
     document.querySelectorAll('.faq-question').forEach(btn => {
       btn.addEventListener('click', function() {
         const item = this.parentElement;
-        // Close other open items
-        document.querySelectorAll('.faq-item.open').forEach(openItem => {
-          if (openItem !== item) {
-            openItem.classList.remove('open');
-            openItem.querySelector('.faq-question').classList.remove('active');
-          }
+        const open = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
         });
-        // Toggle current item
-        item.classList.toggle('open');
-        this.classList.toggle('active');
+        if (!open) {
+          item.classList.add('open');
+          this.setAttribute('aria-expanded', 'true');
+        }
       });
     });
   </script>
