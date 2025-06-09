@@ -953,3 +953,40 @@ nav a:hover {
 .service-card.popular .service-badge {
   color: #fff !important;
 }
+/* --- Fix for dark service cards and FAQ section --- */
+.service-card {
+  background: #23262c !important;
+  color: #fff !important;
+}
+.service-card h3,
+.service-card p,
+.service-card .service-badge {
+  color: #fff !important;
+}
+
+.faq-section {
+  background: #181a20 !important;
+  /* matches other dark backgrounds */
+}
+
+.faq-item {
+  background: #23262c !important;
+  border: 1px solid #31343b !important;
+}
+
+.faq-question {
+  background: #23262c !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+}
+
+.faq-question.active,
+.faq-item.open .faq-question {
+  background: #23262c !important;
+  color: #3eb4f6 !important;
+}
+.faq-answer {
+  background: #23262c !important;
+  color: #b3bbc7 !important;
+  border-radius: 0 0 8px 8px !important;
+}
