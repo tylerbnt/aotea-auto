@@ -134,6 +134,52 @@
         </div>
       </div>
 
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <div class="container">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+
+            <div class="faq-item">
+              <button class="faq-question">How long does a detail or paint correction take?</button>
+              <div class="faq-answer">
+                <p>Most detailing packages take between 2–6 hours depending on size and condition. Paint correction and ceramic coatings can require a full day or more—ask us for an estimate for your vehicle.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">How long do Dura-Seal ceramic coatings last?</button>
+              <div class="faq-answer">
+                <p>Dura-Seal Premium lasts up to 5 years, while Dura-Seal Ultra can last up to 8 years with correct aftercare.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">What areas do you serve?</button>
+              <div class="faq-answer">
+                <p>We’re based in Aotea, Porirua and service the greater Wellington region. Get in touch to check if we can come to you!</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">How do I care for my car after ceramic coating?</button>
+              <div class="faq-answer">
+                <p>Avoid automatic car washes; hand wash with a pH-neutral shampoo and soft mitt. We can provide aftercare advice specific to your coating.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">Do you offer mobile services?</button>
+              <div class="faq-answer">
+                <p>Yes, we offer both studio and mobile services. Some services (like ceramic coatings) may require studio application for best results.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- End FAQ -->
+
     </div>
   </section>
 
@@ -188,5 +234,25 @@
       © 2025 Aotea Auto. All rights reserved.
     </div>
   </footer>
+
+  <!-- FAQ accordion script -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const item = this.parentElement;
+        // Close other open items
+        document.querySelectorAll('.faq-item.open').forEach(openItem => {
+          if (openItem !== item) {
+            openItem.classList.remove('open');
+            openItem.querySelector('.faq-question').classList.remove('active');
+          }
+        });
+        // Toggle current item
+        item.classList.toggle('open');
+        this.classList.toggle('active');
+      });
+    });
+  </script>
+
 </body>
 </html>
