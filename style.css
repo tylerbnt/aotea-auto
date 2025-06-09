@@ -939,3 +939,17 @@ nav a:hover {
 }
 
 /* ====== END ENHANCEMENTS ====== */
+/* --- Fix for white service cards --- */
+.service-card {
+  background: #23262c !important;
+  color: #fff !important;
+}
+.service-card h3,
+.service-card p,
+.service-card .service-badge {
+  color: #fff !important;
+}
+.service-card .service-badge[aria-label="Best for Pre-Sale"],
+.service-card.popular .service-badge {
+  color: #fff !important;
+}
