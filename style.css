@@ -655,20 +655,25 @@ nav a:hover {
   filter: drop-shadow(0 0 6px #3eb4f6);
   fill: #3eb4f6;
 }
+
+/* ======== FIXED FOOTER HOURS & MAP LAYOUT BELOW ======== */
 .footer-info-row {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 1.5em;
+  gap: 2.2em;
   margin-top: 0.2em;
 }
 .footer-hours {
+  min-width: 150px;
+  max-width: 200px;
+  font-size: 1em;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
   color: #b3bbc7;
-  font-size: 1.01em;
-  text-align: right;
-  line-height: 1.45;
+  text-align: left;
   letter-spacing: .01em;
-  min-width: 110px;
 }
 .footer-map {
   margin-top: 0;
@@ -723,15 +728,27 @@ nav a:hover {
   .footer-col-nav {
     font-size: 0.97em;
   }
+  .footer-info-row {
+    flex-direction: column;
+    gap: 1.2em;
+    align-items: flex-start;
+  }
+  .footer-hours, .footer-map {
+    max-width: 100%;
+    min-width: 0;
+    text-align: left;
+  }
 }
 @media (max-width: 700px) {
   .footer-info-row {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.3em;
   }
   .footer-hours {
-    text-align: center;
+    text-align: left;
+    max-width: 100%;
+    min-width: 0;
   }
   .footer-map iframe {
     width: 100% !important;
