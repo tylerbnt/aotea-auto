@@ -6,6 +6,44 @@
   <title>Dura-Seal Packages | Aotea Auto</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    .dura-list { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: flex-start; }
+    .dura-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      padding: 2rem 1.5rem 1.5rem 1.5rem;
+      position: relative;
+      flex: 1 1 270px;
+      min-width: 270px;
+      max-width: 340px;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: box-shadow 0.2s;
+    }
+    .dura-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.16); }
+    .dura-badge {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      background: #e67e22;
+      color: #fff;
+      font-size: 0.95rem;
+      padding: 0.4em 1em;
+      border-radius: 12px;
+      font-weight: 700;
+      z-index: 2;
+      letter-spacing: 0.03em;
+      box-shadow: 0 2px 8px rgba(27,124,93,0.12);
+      text-transform: uppercase;
+    }
+    @media (max-width: 800px) {
+      .dura-list { flex-direction: column; align-items: stretch; }
+      .dura-card { max-width: 100%; min-width: 0; }
+    }
+  </style>
 </head>
 <body>
   <header class="main-header">
@@ -17,7 +55,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="duraseal.html">Dura-Seal</a></li>
+          <li><a href="duraseal.html" class="active">Dura-Seal</a></li>
           <li><a href="testimonials.html">Testimonials</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html" class="cta-nav">Contact</a></li>
@@ -26,47 +64,48 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="container hero-overlay-content">
       <div class="hero-text">
-        <h1><span class="accent">Dura-Seal Packages</span></h1>
-        <p>Protect your vehicle with our professionally applied Dura-Seal coatings – for new or used cars.</p>
+        <h1><span class="accent">Dura-Seal Ceramic Packages</span></h1>
+        <p>Protect your vehicle with our professionally applied Dura-Seal ceramic coatings for new or used cars.</p>
       </div>
     </div>
   </section>
 
-  <!-- Dura-Seal Packages Section -->
-  <section class="package-section">
+  <section class="dura-section">
     <div class="container">
-      <div class="package-header">
+      <div class="service-category">
         <h2>New Car Packages</h2>
-        <div class="package-grid">
-          <div class="package-card">
+        <div class="dura-list">
+          <div class="dura-card">
+            <span class="dura-badge">Most Popular</span>
             <h3>Dura-Seal Premium</h3>
             <ul>
               <li>Exterior wash and decontamination</li>
               <li>Single stage paint enhancement</li>
               <li>Dura-Seal Premium application to paint and exterior trim</li>
               <li>Glass coating</li>
+              <li>Up to 5 years protection</li>
             </ul>
           </div>
-          <div class="package-card">
+          <div class="dura-card">
             <h3>Dura-Seal Ultra</h3>
             <ul>
               <li>Exterior wash and decontamination</li>
               <li>Single stage paint enhancement</li>
               <li>Dura-Seal Ultra application to paint and exterior trim</li>
               <li>Glass coating</li>
+              <li>Up to 8 years protection</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="package-header" style="margin-top:48px;">
+      <div class="service-category" style="margin-top:48px;">
         <h2>Used Car Packages</h2>
-        <div class="package-grid">
-          <div class="package-card">
+        <div class="dura-list">
+          <div class="dura-card">
             <h3>Light Paint Correction (Ultra &amp; Premium)</h3>
             <ul>
               <li>Exterior wash and decontamination</li>
@@ -75,7 +114,7 @@
               <li>Glass coating</li>
             </ul>
           </div>
-          <div class="package-card">
+          <div class="dura-card">
             <h3>Heavy Paint Correction</h3>
             <ul>
               <li>Exterior wash and decontamination</li>
@@ -87,13 +126,26 @@
         </div>
       </div>
 
+      <div class="service-category" style="margin-top:48px;">
+        <h2>Add-On Protection</h2>
+        <div class="dura-list">
+          <div class="dura-card">
+            <h3>Fabric &amp; Leather Protection</h3>
+            <ul>
+              <li>Invisible barrier against spills and stains</li>
+              <li>Shields leather from soiling and wear</li>
+              <li>Can be added to any ceramic package</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div class="package-note" style="margin-top:32px; text-align:center;">
         <p>Not sure which package is right for your vehicle? <a href="contact.html" class="accent">Contact us</a> for expert advice or to book your Dura-Seal treatment.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer (identical across all pages) -->
   <footer class="ccc-footer">
     <div class="footer-top footer-container">
       <div class="footer-col footer-col-logo">
@@ -103,18 +155,18 @@
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="duraseal.html">Dura-Seal</a>
-        <a href="gallery.html">Gallery</a>
         <a href="testimonials.html">Testimonials</a>
+        <a href="gallery.html">Gallery</a>
         <a href="contact.html" class="footer-cta">Book Now</a>
       </nav>
       <div class="footer-col footer-col-info">
         <div class="footer-social">
           <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" rel="noopener">
-            <!-- Instagram SVG -->
+            <!-- Instagram SVG Icon -->
             <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><path d="M12 2.163c3.204.002 3.584.012 4.85.07 1.206.056 1.984.246 2.446.414a4.927 4.927 0 0 1 1.675.964 4.927 4.927 0 0 1 ..."/></svg>
           </a>
           <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" rel="noopener">
-            <!-- Facebook SVG -->
+            <!-- Facebook SVG Icon -->
             <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.494v-9.294H9.692v-3.622h3.127V8.413c0-3...."/></svg>
           </a>
         </div>
@@ -130,11 +182,11 @@
             Sun: 9am–3pm
           </div>
           <div class="footer-map">
-<iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2875.222145395114!2d174.8427764766538!3d-41.14365677130263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38a2f7fdc8c59d%3A0xf6cfbd1[...]"
-  width="100%" height="260" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade"
-  aria-label="Map of Shop B, 4 Te Puia Drive, Aotea, Porirua"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2875.222145395114!2d174.8427764766538!3d-41.14365677130263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38a2f7fdc8c59d%3A0xf6cfbd1[...]"
+              width="100%" height="260" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              aria-label="Map of Shop B, 4 Te Puia Drive, Aotea, Porirua"></iframe>
           </div>
         </div>
       </div>
