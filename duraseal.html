@@ -21,9 +21,20 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      transition: box-shadow 0.2s;
+      transition: box-shadow 0.2s, background 0.2s, border 0.2s;
+      border: 1px solid #eee;
+      color: #222 !important;
     }
-    .dura-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.16); }
+    .dura-card h3,
+    .dura-card ul,
+    .dura-card li {
+      color: #222 !important;
+    }
+    .dura-card:hover {
+      box-shadow: 0 8px 28px rgba(0,0,0,0.16);
+      background: #f8f9fa;
+      border-color: #e67e22;
+    }
     .dura-badge {
       position: absolute;
       top: 1.2rem;
@@ -162,12 +173,12 @@
       <div class="footer-col footer-col-info">
         <div class="footer-social">
           <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" rel="noopener">
-            <!-- Instagram SVG Icon -->
-            <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><path d="M12 2.163c3.204.002 3.584.012 4.85.07 1.206.056 1.984.246 2.446.414a4.927 4.927 0 0 1 1.675.964 4.927 4.927 0 0 1 ..."/></svg>
+            <!-- Instagram SVG Icon (placeholder) -->
+            <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
           </a>
           <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook" rel="noopener">
-            <!-- Facebook SVG Icon -->
-            <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.494v-9.294H9.692v-3.622h3.127V8.413c0-3...."/></svg>
+            <!-- Facebook SVG Icon (placeholder) -->
+            <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
           </a>
         </div>
         <div class="footer-info-row">
