@@ -45,6 +45,14 @@
       box-sizing: border-box;
       overflow-wrap: break-word;
       word-break: break-word;
+      position: relative;
+    }
+    .service-card ul {
+      padding-left: 1.2em;
+      margin: 0 0 1em 0;
+      width: 100%;
+      overflow-wrap: break-word;
+      word-break: break-word;
     }
     .service-badge {
       position: absolute;
@@ -121,7 +129,10 @@
         min-width: 0;
         width: 100%;
         margin: 0 0 1.5rem 0;
-        padding: 1.5em 1em;
+        padding: 1.2em 0.7em;
+      }
+      .service-card ul {
+        padding-left: 1.1em;
       }
     }
     @media (max-width: 600px) {
@@ -130,7 +141,10 @@
         padding-right: 0.25rem;
       }
       .service-card {
-        padding: 1em 0.5em;
+        padding: 1em 0.4em;
+      }
+      .service-card ul {
+        padding-left: 1em;
       }
     }
   </style>
