@@ -95,8 +95,9 @@
       <a href="index.html" class="logo">
         <img src="aotea_auto_horiz_logo_screen-logo-full-colour-rgb.png" alt="Aotea Auto Logo">
       </a>
+      <button class="nav-toggle" aria-label="Open navigation menu">&#9776;</button>
       <nav>
-        <ul>
+        <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html" class="active">Services</a></li>
           <li><a href="duraseal.html">Dura-Seal</a></li>
@@ -140,7 +141,6 @@
           </div>
           <div class="service-card">
             <span class="service-badge" aria-label="Best for Pre-Sale">Best for Pre-Sale</span>
-            <!-- The SVG icon below has been removed -->
             <h3>Renewal Package</h3>
             <ul>
               <li>All of Refresh Package</li>
@@ -185,11 +185,10 @@
         <div class="services-list">
           <div class="service-card">
             <h3>Dura-Seal Premium</h3>
-            <p>Creates a durable ceramic barrier that protects paintwork from environmental damage, making cleaning easier with no need for waxing or polishing. <br><strong>Expected lifespan:</strong> Up to 5 years.</p>
+            <p>Creates a durable ceramic barrier that protects paintwork from environmental damage, making cleaning easier with no need for waxing or polishing. <br><strong>Expected lifespan:</strong> up to 5 years.</p>
           </div>
           <div class="service-card popular">
             <span class="service-badge">Most Popular</span>
-            <!-- The SVG icon below has been removed -->
             <h3>Dura-Seal Ultra</h3>
             <p>A thicker, longer-lasting nano-ceramic coating that bonds to paint for high-gloss, advanced UV and contaminant protection. Ultra is designed for maximum durability, with an expected lifespan of up to 8 years.</p>
           </div>
@@ -228,7 +227,7 @@
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">How long does a detail or paint correction take?</button>
               <div class="faq-answer">
-                <p>Most detailing packages take between 2–6 hours depending on size and condition. Paint correction and ceramic coatings can require a full day or more—ask us for an estimate when booking.</p>
+                <p>Most detailing packages take between 2–6 hours depending on size and condition. Paint correction and ceramic coatings can require a full day or more—ask us for an estimate for your vehicle.</p>
               </div>
             </div>
             <div class="faq-item">
@@ -333,6 +332,13 @@
           this.setAttribute('aria-expanded', 'true');
         }
       });
+    });
+  </script>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
     });
   </script>
 </body>
