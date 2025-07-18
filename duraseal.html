@@ -171,3 +171,9 @@
     © 2025 Aotea Auto. All rights reserved.
   </div>
 </footer>
+ // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
